@@ -1,0 +1,161 @@
+@media (max-width: 1600px) {
+
+  .header__container {
+    padding: 30px 75px;
+  }
+
+  .header__list {
+    margin-right: var(--mr-extra-large);
+  }
+
+  .header__bottom-container {
+    padding: 20px 75px;
+  }
+
+  .header__item-bottom {
+    margin-right: var(--mr-normal);
+  }   
+}
+
+@media (max-width: 1300px) {
+
+  .header__list {
+    margin-right: var(--mr-large);
+  }
+
+  .header__list-item:not(:last-child) {
+    margin-right: var(--mr-small);
+  }
+
+  .header__item-bottom {
+    margin-right: var(--mr-small);
+  }   
+
+  .header__list-bottom-link {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1100px) {
+
+  .header__container {
+    padding: 30px 40px;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .header__logo {
+    margin-right: 0;
+  }
+
+  .header__nav {
+    position: absolute;
+    top: 0;
+    left: -1200px;
+    opacity: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 105px 75px 75px 75px;
+    transition: left .3s ease-in-out, opacity .3s ease-in-out;
+  }
+
+  .header__nav.open {
+    left: 0;
+    opacity: 100%;
+  }
+
+  .header__list {
+    flex-direction: column;
+    margin: 0;
+    margin-bottom: var(--mb-large);
+  }
+
+  .header__list-item {
+    margin: 0;
+    margin-bottom: var(--mb-small);
+  }
+
+  .header__list-item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .header__list-link {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 64px;
+  }
+
+  .header__area-txt {
+    font-weight: 600;
+  }
+
+  .header__area {
+    justify-content: center;
+    width: 257px;
+    padding: 15px 35px;
+    border: 1px solid var(--purple);
+    border-radius: 100px;
+  }
+
+  .header__top-search {
+    display: flex;
+    align-items: center;
+    min-width: 30px;
+    min-height: 30px;
+    background-color: var(--black);
+  }
+
+  .header__bottom {
+    display: none;
+  } 
+
+  .header__input-wrapper {
+    display: none;
+    padding-left: 10px;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+  
+  .header__input-wrapper.open {
+    display: flex;
+    align-items: center;
+    opacity: 100%;
+  }
+
+  .search-input {
+    margin-right: 10px;
+    padding: 0 15px;
+  }
+
+}
+
+/* @media (max-width: 980px) {
+
+} */
+
+/* @media (max-width: 720px) {
+
+} */
+
+@media (max-width: 320px) {
+  .header__list {
+    margin-bottom: var(--mb-extra-large);
+  }
+
+  .header__list-link {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .header__area {
+    width: 115px;
+  }
+
+  .header__area-txt {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
