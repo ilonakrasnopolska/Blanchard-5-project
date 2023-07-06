@@ -41,6 +41,7 @@ ul {
 button {
   border: inherit;
   cursor: pointer;
+  background-color: transparent;
 }
 
 input::placeholder {
@@ -115,6 +116,9 @@ input::placeholder {
    --black: #000000;
    --white: #FFFFFF;
    --purple: #9D5CD0;
+   --light-purple: #C283F3;
+   --medium-purple: #9D5CD0;
+   --dark-purple: #7943A4;
 }
 
 :root {
@@ -159,6 +163,7 @@ input::placeholder {
   max-width: 1920px;
   margin: 0 auto;
   padding: 30px 100px;
+  position: relative;
 }
 
 .header__bottom-container {
@@ -172,10 +177,47 @@ input::placeholder {
   align-items: center;
 }
 
+/* Форма поиска */
+
 .header__top-search {
   display: none;
   background-color: transparent;
 }
+
+.header__search-form {
+  position: absolute;
+  right: 5px;
+  transform: scale(0);
+  padding-left: 10px;
+  opacity: 0;
+  background-color: var(--black);
+  padding: 5px 0;
+  transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+}
+
+.header__search-form.open {
+  display: flex;
+  align-items: center;
+  transform: scale(1);
+  opacity: 100%;
+}
+
+.search-input {
+  margin-right: 10px;
+  padding: 0 15px;
+  transition: border-color .3s ease-in-out;
+  cursor: pointer;
+}
+
+.search-input:focus {
+  border-bottom: 1px solid var(--light-purple);
+  cursor: url(../img/cursor.png), pointer;
+}
+
+.search-input:active {
+  border-bottom: 1px solid var(--light-purple);
+}
+
 
 /* burger */
 .burger {
@@ -249,16 +291,77 @@ input::placeholder {
   margin-right: var(--mr-normal);
 }
 
+.header__list-link:focus {
+  color: var(--white);
+  background-color: var(--dark-purple);
+}
+
+.header__list-link:hover {
+  color: var(--light-purple);
+  background-color: transparent;
+}
+
+.header__list-link:active {
+  color: var(--dark-purple);
+  background-color: transparent;
+}
+
 .header__list-link {
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
   color: var(--white);
+  padding: 5px;
+  cursor: url(../img/cursor.png), pointer;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
 }
 
 .header__area {
   align-items: center;
   background-color: transparent;
+  cursor: url(../img/cursor.png), pointer;
+  transition: background-color .3s ease-out, fill .3s ease-out;
+}
+
+.header__area .header__area-txt {
+  transition: color .3s ease-out;
+}
+
+.header__area:focus svg path {
+  fill: var(--white);
+}
+
+.header__area:hover svg path {
+  fill: var(--light-purple);
+}
+
+.header__area:active svg path{
+  fill: var(--medium-purple);
+}
+
+.header__area:focus {
+  background-color: var(--dark-purple);
+  color: var(--white);
+}
+
+.header__area:hover {
+  background-color: transparent;
+}
+
+.header__area:active {
+  background-color: transparent;
+}
+
+.header__area:focus .header__area-txt {
+  color: var(--white);
+}
+
+.header__area:hover .header__area-txt {
+  color: var(--light-purple);
+}
+
+.header__area:active .header__area-txt {
+  color: var(--medium-purple);
 }
 
 .header__area-txt {
@@ -307,5 +410,21 @@ input::placeholder {
   font-size: 18px;
   line-height: 25px;
   color: var(--white);
+  cursor: url(../img/cursor.png), pointer;
+  transition: border-color .3s ease-in-out;
 }
+
+.header__input:focus {
+  border-bottom: 1px solid var(--dark-purple);
+}
+
+.header__input:hover {
+  border-bottom: 1px solid var(--light-purple);
+}
+
+.header__input:active {
+  border-bottom: 1px solid var(--light-purple);
+}
+
+/* section hero */
 

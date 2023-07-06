@@ -111,34 +111,29 @@
   .header__bottom {
     display: none;
   } 
-
-  .header__input-wrapper {
-    display: none;
-    padding-left: 10px;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-  }
   
-  .header__input-wrapper.open {
-    display: flex;
-    align-items: center;
-    opacity: 100%;
-  }
-
-  .search-input {
-    margin-right: 10px;
-    padding: 0 15px;
-  }
-
 }
 
 /* @media (max-width: 980px) {
-
+  
 } */
 
-/* @media (max-width: 720px) {
+@media (max-width: 772px) {
+  .header__search-form.open {
+    width: 100%;
+    height: 100%;
+    padding: 0 35px;
+    z-index: 10;
+  }
 
-} */
+  .header__input {
+    width: 100%;
+  }
+
+  .header__input-send {
+    margin-right: 10px;
+  }
+}
 
 @media (max-width: 320px) {
   .header__list {
