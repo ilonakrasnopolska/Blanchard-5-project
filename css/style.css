@@ -156,7 +156,6 @@ input::placeholder {
 
 .header {
   position: relative;
-  background-color: var(--black);
 }
 
 .header__container {
@@ -164,17 +163,12 @@ input::placeholder {
   margin: 0 auto;
   padding: 30px 100px;
   position: relative;
-}
-
-.header__bottom-container {
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 20px 100px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__top {
-  justify-content: space-between;
-  align-items: center;
+  background-color: var(--black);
 }
 
 /* Форма поиска */
@@ -376,25 +370,154 @@ input::placeholder {
   position: absolute;
   content: "";
   top: 100px;
-  right: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.header-content {
+.header__bottom-container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 20px 100px;
+}
+
+.header__bottom-nav {
   justify-content: space-between;
   align-items: center;
 }
 
-.header__item-bottom {
+.menu__item {
+  position: relative;
+  padding-right: 10px;
   margin-right: var(--mr-large);
 }
 
-.header__list-bottom-link {
+.menu__btn {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  padding: 5px 15px 5px 15px;
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
+  z-index: 2;
   color: var(--white);
+  cursor: url(../img/cursor.png), pointer;
+  transition: color .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+.menu__btn::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 5px;
+  border: solid rgb(225, 225, 225);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transition: transform .2s ease-out;
+}
+
+.menu__btn:focus {
+  color: var(--white);
+  background-color: var(--dark-purple);
+}
+
+.menu__btn:hover {
+  color: var(--purple);
+  background-color: transparent;
+}
+
+.menu__btn:active {
+  color: var(--dark-purple);
+  background-color: transparent;
+}
+
+.menu__btn:focus::after {
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.menu__btn:hover::after {
+  border: solid var(--purple);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.menu__btn:active::after {
+  border: solid var(--dark-purple);
+  border-width: 0 2px 2px 0;
+  top: 15px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  min-width: 300px;
+  min-height: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 35px;
+  transform: translateY(-10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility .3s ease-out, opacity .2s ease-out, transform .3s ease-out;
+  z-index: 1;
+}
+
+.menu__item.menu-open .dropdown-menu {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu__item {
+  position: relative;
+  min-width: 220px;
+  min-height: 40px;
+  padding: 10px;
+}
+
+.dropdown-menu__item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.dropdown-menu__item:not(:last-child) {
+  margin-bottom: var(--mb-small);
+}
+
+.dropdown-menu__item:focus {
+  border: 1px solid var(--medium-purple);
+}
+
+.dropdown-menu__item:hover {
+  border: 1px solid var(--medium-purple);
+}
+
+.dropdown-menu__item:active::after {
+  border: none; 
+  background-color: rgba(194, 131, 243, 0.4);
+}
+
+.dropdown-menu__link {
+  display: block;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  cursor: url(../img/cursor-2.png), pointer;
 }
 
 .header__search {
@@ -424,6 +547,148 @@ input::placeholder {
 
 .header__input:active {
   border-bottom: 1px solid var(--light-purple);
+}
+
+/* dropdowm menu */
+
+.realism-pic1 {
+  background-image: url(../img/dropdown-menu/realism1.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.realism-pic2 {
+  background-image: url(../img/dropdown-menu/realism2.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.realism-pic3 {
+  background-image: url(../img/dropdown-menu/realism3.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.realism-pic4 {
+  background-image: url(../img/dropdown-menu/realism4.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.impressionism-pic1 {
+  background-image: url(../img/dropdown-menu/impressionism1.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.impressionism-pic2 {
+  background-image: url(../img/dropdown-menu/impressionism2.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.impressionism-pic3 {
+  background-image: url(../img/dropdown-menu/impressionism3.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.impressionism-pic4 {
+  background-image: url(../img/dropdown-menu/impressionism4.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.postimpressionism-pic1 {
+  background-image: url(../img/dropdown-menu/postimpressionism1.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.postimpressionism-pic2 {
+  background-image: url(../img/dropdown-menu/postimpressionism2.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.postimpressionism-pic3 {
+  background-image: url(../img/dropdown-menu/postimpressionism3.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.postimpressionism-pic4 {
+  background-image: url(../img/dropdown-menu/postimpressionism4.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.avantgarde-pic1 {
+  background-image: url(../img/dropdown-menu/avantgarde1.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.avantgarde-pic2 {
+  background-image: url(../img/dropdown-menu/avantgarde2.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.avantgarde-pic3 {
+  background-image: url(../img/dropdown-menu/avantgarde3.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.avantgarde-pic4 {
+  background-image: url(../img/dropdown-menu/avantgarde4.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.futurism-pic1 {
+  background-image: url(../img/dropdown-menu/futurism1.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.futurism-pic2 {
+  background-image: url(../img/dropdown-menu/futurism2.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.futurism-pic3 {
+  background-image: url(../img/dropdown-menu/futurism3.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.futurism-pic4 {
+  background-image: url(../img/dropdown-menu/futurism4.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* section hero */

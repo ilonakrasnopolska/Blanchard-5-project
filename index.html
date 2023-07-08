@@ -14,8 +14,8 @@
 
 <body>
   <header class="header">
-    <div class="header__container">
-      <div class="header__top flex">
+      <div class="header__top">
+        <div class="header__container flex">
         <button class="header__burger burger" id="burger" aria-label="Кнопка для раскрытия мобильной навигации">
           <span class="burger__line"></span>
           <span class="burger__line"></span>
@@ -96,68 +96,125 @@
             </svg>
           </button>
         </form>
-      </div>
-      <div class="header__bottom">
-        <div class="header__bottom-container header-content flex">
-          <ul class="header__list-bottom flex">
-            <li class="header__item-bottom">
-              <a href="" class="header__list-bottom-link">
-                Реализм
-              </a>
-              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 1L6 6L1 1" stroke="white" />
-              </svg>
-            </li>
-            <li class="header__item-bottom">
-              <a href="" class="header__list-bottom-link">
-                Импрессионизм
-              </a>
-              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 1L6 6L1 1" stroke="white" />
-              </svg>
-            </li>
-            <li class="header__item-bottom">
-              <a href="" class="header__list-bottom-link">
-                Постимпрессионизм
-              </a>
-              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 1L6 6L1 1" stroke="white" />
-              </svg>
-            </li>
-            <li class="header__item-bottom">
-              <a href="" class="header__list-bottom-link">
-                Авангард
-              </a>
-              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 1L6 6L1 1" stroke="white" />
-              </svg>
-            </li>
-            <li class="header__item-bottom">
-              <a href="" class="header__list-bottom-link">
-                Футуризм
-              </a>
-              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 1L6 6L1 1" stroke="white" />
-              </svg>
-            </li>
-          </ul>
-          <div class="header__finder flex" role="search">
-            <button class="header__search">
-              <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="6.8678" height="1.71695"
-                  transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M12.0967 18C7.53016 18 3.99668 14.3229 3.99668 10C3.99668 5.67715 7.53016 2 12.0967 2C16.6632 2 20.1967 5.67715 20.1967 10C20.1967 14.3229 16.6632 18 12.0967 18ZM12.0967 20C6.57383 20 2.09668 15.5228 2.09668 10C2.09668 4.47715 6.57383 0 12.0967 0C17.6195 0 22.0967 4.47715 22.0967 10C22.0967 15.5228 17.6195 20 12.0967 20Z"
-                  fill="white" />
-              </svg>
-            </button>
-            <div class="header__input-wrapper" role="search">
-              <input class="header__input" type="text" placeholder="Поиск по&nbsp;сайту">
-            </div>
-          </div>
         </div>
       </div>
-    </div>
+      <div class="header__bottom">
+      <div class="header__bottom-container">
+        <nav class="header__bottom-nav flex">
+        <ul class="menu flex">
+          <li class="menu__item">
+            <button class="menu__btn">
+              Реализм
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-menu__item realism-pic1">
+                <a href="" class="dropdown-menu__link">Тинторетто</a>
+              </li>
+              <li class="dropdown-menu__item realism-pic2">
+                <a href="" class="dropdown-menu__link">Фридрих</a>
+              </li>
+              <li class="dropdown-menu__item realism-pic3">
+                <a href="" class="dropdown-menu__link">Леонардо</a>
+              </li>
+              <li class="dropdown-menu__item realism-pic4">
+                <a href="" class="dropdown-menu__link">Верроккьо</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <button class="menu__btn">
+              Импрессионизм
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-menu__item impressionism-pic1">
+                <a href="" class="dropdown-menu__link">Моне</a>
+              </li>
+              <li class="dropdown-menu__item impressionism-pic2">
+                <a href="" class="dropdown-menu__link">Сислей</a>
+              </li>
+              <li class="dropdown-menu__item impressionism-pic3">
+                <a href="" class="dropdown-menu__link">Мане</a>
+              </li>
+              <li class="dropdown-menu__item impressionism-pic4">
+                <a href="" class="dropdown-menu__link">Ренуар</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <button class="menu__btn">
+              Постимпрессионизм
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-menu__item postimpressionism-pic1">
+                <a href="" class="dropdown-menu__link">Ван Гог</a>
+              </li>
+              <li class="dropdown-menu__item postimpressionism-pic2">
+                <a href="" class="dropdown-menu__link">Сезанн</a>
+              </li>
+              <li class="dropdown-menu__item postimpressionism-pic3">
+                <a href="" class="dropdown-menu__link">Гоген</a>
+              </li>
+              <li class="dropdown-menu__item postimpressionism-pic4">
+                <a href="" class="dropdown-menu__link">Сёра</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <button class="menu__btn">
+              Авангард
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-menu__item avantgarde-pic1">
+                <a href="" class="dropdown-menu__link">Кандинский</a>
+              </li>
+              <li class="dropdown-menu__item avantgarde-pic2">
+                <a href="" class="dropdown-menu__link">Маринетти</a>
+              </li>
+              <li class="dropdown-menu__item avantgarde-pic3">
+                <a href="" class="dropdown-menu__link">Малевич</a>
+              </li>
+              <li class="dropdown-menu__item avantgarde-pic4">
+                <a href="" class="dropdown-menu__link">Пикассо</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <button class="menu__btn">
+              Футуризм
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-menu__item futurism-pic1">
+                <a href="" class="dropdown-menu__link">Карра</a>
+              </li>
+              <li class="dropdown-menu__item futurism-pic2">
+                <a href="" class="dropdown-menu__link">Прателла</a>
+              </li>
+              <li class="dropdown-menu__item futurism-pic3">
+                <a href="" class="dropdown-menu__link">Северини</a>
+              </li>
+              <li class="dropdown-menu__item futurism-pic4">
+                <a href="" class="dropdown-menu__link">Балла</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="header__finder flex" role="search">
+          <button class="header__search">
+            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695"
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.0967 18C7.53016 18 3.99668 14.3229 3.99668 10C3.99668 5.67715 7.53016 2 12.0967 2C16.6632 2 20.1967 5.67715 20.1967 10C20.1967 14.3229 16.6632 18 12.0967 18ZM12.0967 20C6.57383 20 2.09668 15.5228 2.09668 10C2.09668 4.47715 6.57383 0 12.0967 0C17.6195 0 22.0967 4.47715 22.0967 10C22.0967 15.5228 17.6195 20 12.0967 20Z"
+                fill="white" />
+            </svg>
+          </button>
+          <div class="header__input-wrapper" role="search">
+            <input class="header__input" type="text" placeholder="Поиск по&nbsp;сайту">
+          </div>
+        </div>
+      </nav>
+      </div>
+      </div>
   </header>
   <main>
     <section></section>
