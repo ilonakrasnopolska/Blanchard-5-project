@@ -12,7 +12,7 @@
     padding: 20px 75px;
   }
 
-  .header__item-bottom {
+  .menu__item {
     margin-right: var(--mr-normal);
   }   
 }
@@ -27,11 +27,11 @@
     margin-right: var(--mr-small);
   }
 
-  .header__item-bottom {
+  .menu__item {
     margin-right: var(--mr-small);
   }   
 
-  .header__list-bottom-link {
+  .menu__btn {
     font-size: 15px;
   }
 }
