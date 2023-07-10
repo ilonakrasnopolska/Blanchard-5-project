@@ -39,18 +39,22 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 
-$menuBtn.forEach(button => {
-  button.addEventListener('click', function(event) {
-    $menuItem.forEach(item => {
+
+$menuBtn.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    btn.parentElement.classList.toggle('menu-open')
+    if (!btn.parentElement.classList.contains('menu-open')) {
+      $menuItem.forEach(item => {
         item.classList.remove('menu-open');
-        console.log(item.classList)
-    });
-    event.isClick = true
-
-    button.parentElement.classList.toggle('menu-open')
-  });
+      });
+    }else{
+      $menuItem.forEach(item => {
+        item.classList.remove('menu-open');
+      });
+      e.target.parentElement.classList.add('menu-open')
+    }
+  })
 })
-
 
 document.body.addEventListener('click', function (event) {
 
