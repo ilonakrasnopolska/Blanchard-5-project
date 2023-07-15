@@ -4,6 +4,10 @@
     padding: 30px 75px;
   }
 
+  .container {
+    padding: 0 75px;
+  }
+
   .header__list {
     margin-right: var(--mr-extra-large);
   }
@@ -15,6 +19,10 @@
   .menu__item {
     margin-right: var(--mr-normal);
   }   
+
+  .footer__container {
+    padding: 30px 75px;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -40,6 +48,10 @@
 
   .header__container {
     padding: 30px 40px;
+  }
+
+  .container {
+    padding: 0 40px;
   }
 
   .burger {
@@ -112,13 +124,17 @@
     display: none;
   } 
   
+  .footer__container {
+    padding: 30px 40px;
+  }
 }
 
-/* @media (max-width: 980px) {
-  
-} */
-
 @media (max-width: 772px) {
+
+  .header__container {
+    padding: 30px 15px;
+  }
+
   .header__search-form.open {
     width: 100%;
     height: 100%;
@@ -133,9 +149,41 @@
   .header__input-send {
     margin-right: 10px;
   }
+
+  .hero-content {
+    padding: 70px 0;
+  }
+
+  .footer__container {
+    padding: 30px 15px;
+  }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 590px) {
+  .hero__title {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 0.1em;
+  }
+
+  .hero__txt {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 370px) {
+  
+  .header__container {
+    padding: 15px;
+  }
+
+  .header__logo {
+    width: 96px;
+    height: 22px;
+  }
+
   .header__list {
     margin-bottom: var(--mb-extra-large);
   }
@@ -153,4 +201,47 @@
     font-size: 16px;
     line-height: 16px;
   }
+
+  .hero-content {
+    padding: 50px 0;
+  }
+
+  .hero__title {
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 0.1em;
+  }
+
+  .hero__txt {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  .hero__btn {
+    width: 100%;
+    height: 50px;
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  .catalogue__txt {
+    display: none;
+  }
+
+  .footer__container {
+    padding: 15px;
+    flex-direction: column-reverse;
+  }
+
+  .footer__logo {
+    margin: 0;
+    width: 96px;
+    height: 22px;
+  }
+
+  .footer__social-icon {
+    margin-bottom: var(--mb-small);
+  }
+
 }

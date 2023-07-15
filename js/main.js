@@ -8,6 +8,24 @@ const $burger = document.getElementById("burger"),
   $menuBtn = document.querySelectorAll(".menu__btn"),
   $dropDownMenu = document.querySelectorAll(".dropdown-menu")
 
+// swiper
+
+const swiper = new Swiper('.swiper-container', {
+  // Цикличность
+  loop: true,
+  // Пагинация
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  a11y: {
+    paginationBulletMessage: 'Тут название слайда {{index}}',
+  }
+  
+});
+
+// burger
+
 document.addEventListener("DOMContentLoaded", function () {
   $burger.addEventListener("click", function () {
     $burgerMenu.classList.toggle("open")
@@ -19,6 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
     $nav.classList.toggle("open")
   })
 })
+
+// search
 
 document.addEventListener("DOMContentLoaded", function () {
   $search.addEventListener("click", function () {
@@ -38,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 })
 
-
+//dropdown menu
 
 $menuBtn.forEach((btn) => {
   btn.addEventListener('click', (e) => {
@@ -68,3 +88,10 @@ document.body.addEventListener('click', function (event) {
     item.classList.remove('menu-open')
   })
 })
+
+// /scroll
+
+Array.prototype.forEach.call(
+  document.querySelectorAll('.scroll'),
+  el => new SimpleBar(el)
+);
