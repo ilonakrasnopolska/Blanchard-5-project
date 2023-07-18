@@ -44,7 +44,7 @@
   }
 
   .event__card {
-    padding: 38px;
+    padding: 30px;
   }
 
   .event__img-txt {
@@ -145,8 +145,9 @@
 }
 
 @media (max-width: 990px) {
-  .event__card-wrap.event-pic3 {
-    display: none;
+
+  .event__card {
+    padding: 15px;
   }
 }
 
@@ -203,11 +204,6 @@
   }
 }
 
-@media (max-width: 575px) {
-  .event__card-wrap.event-pic2 {
-    display: none;
-  }
-}
 
 @media (max-width: 370px) {
   

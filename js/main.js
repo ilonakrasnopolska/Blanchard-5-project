@@ -21,8 +21,15 @@ const swiper = new Swiper('.swiper-container', {
   a11y: {
     paginationBulletMessage: 'Тут название слайда {{index}}',
   }
-  
 });
+
+const swiperEvent = new Swiper('.swiper-event', {
+    // Цикличность
+    loop: true,
+   // Navigation arrows
+   navigation: {
+     nextEl: '.swiper-button-next',
+}});
 
 // burger
 
@@ -67,7 +74,7 @@ $menuBtn.forEach((btn) => {
       $menuItem.forEach(item => {
         item.classList.remove('menu-open');
       });
-    }else{
+    } else {
       $menuItem.forEach(item => {
         item.classList.remove('menu-open');
       });

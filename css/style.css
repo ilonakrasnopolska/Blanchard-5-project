@@ -116,6 +116,7 @@ input::placeholder {
 :root {
   --grey: #333333;
   --grey-light: #CACACA;
+  --grey-lighter: #ECECEC;
   --grey-normal: #999999;
   --black: #000000;
   --white: #FFFFFF;
@@ -889,10 +890,22 @@ input::placeholder {
 
 /* section events */
 
+.event-content{
+  position: relative;
+}
+
+.swiper-event {
+  left: 3px;
+}
+
 .event__card-wrap {
   position: relative;
   height: 100%;
-  padding-top: 55%;
+  padding-top: 60%;
+}
+
+.event__slider-hidden {
+  opacity: 0;
 }
 
 .event-pic1 {
@@ -916,12 +929,26 @@ input::placeholder {
   background-position: top center;
 }
 
+.swiper-pic1 {
+  background-image: url(../img/events4.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+}
+
+.swiper-pic2 {
+  background-image: url(../img/events5.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+}
+
 .event__card {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   height: 100%;
-  padding: 50px;
+  padding: 45px;
   border: 1px solid var(--grey-light);
   border-top: transparent;
   flex-basis: 100%;
@@ -973,6 +1000,18 @@ input::placeholder {
   color: var(--grey);
   background-color: transparent;
   border-bottom: 1px solid var(--grey);
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  color: var(--black);
+  background-color: var(--grey-lighter);
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-size: 30px;
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  right: -10px;
 }
 
 /* section projects */
