@@ -24,12 +24,42 @@ const swiper = new Swiper('.swiper-container', {
 });
 
 const swiperEvent = new Swiper('.swiper-event', {
-    // Цикличность
-    loop: true,
-   // Navigation arrows
-   navigation: {
-     nextEl: '.swiper-button-next',
-}});
+  // Цикличность
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  // Default parameters
+  slidesPerView: 3,
+  allowSlideNext: true,
+  spaceBetween: 25,
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0
+    },
+    // when window width is >= 480px
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 25
+    },
+    // when window width is >= 640px
+    1220: {
+      slidesPerView: 3,
+      spaceBetween: 25
+    },
+    1750: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    }
+  }
+});
 
 // burger
 
