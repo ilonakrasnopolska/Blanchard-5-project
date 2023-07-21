@@ -757,11 +757,14 @@ input::placeholder {
 
 /* swiper */
 .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-container {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .swiper-img1 {
@@ -785,10 +788,7 @@ input::placeholder {
   background-position: center;
 }
 
-.swiper-horizontal>.swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
+.swiper-pagination-hero {
   opacity: 0;
 }
 
@@ -895,46 +895,16 @@ input::placeholder {
 
 .swiper-event {
   width: 100%;
-  max-width: 1625px;
-  height: 700px;
-  overflow: hidden;
-  position: relative;
-}
-
-.event-pic {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top center;
-  height: max-content;
-}
-
-.event-pic1 {
-  background-image: url(../img/events1.png);
-}
-
-.event-pic2 {
-  background-image: url(../img/events2.png);
-}
-
-.event-pic3 {
-  background-image: url(../img/events3.png);
-}
-
-.event-pic4 {
-  background-image: url(../img/events4.png);
-}
-
-.event-pic5 {
-  background-image: url(../img/events5.png);
+  height: 100%;
 }
 
 .event__card-wrap {
   width: 100%;
-  padding-top: 300px;
 }
 
 
 .event__card {
+  height: 70%;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
@@ -991,47 +961,31 @@ input::placeholder {
   border-bottom: 1px solid var(--grey);
 }
 
+.swiper-pagination-event {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
 
 
-/* .swiper-button-next-event {
-   width: 100%;
-  top: 50%;
-  right: auto;
-  left: 49%;
-} */
-
+.swiper-event-errow-container {
+  position: relative;
+  width: 100%;
+}
 
 .swiper-button-next {
-  width: 100%;
-  top: 50%;
-  right: auto;
-  left: 49%;
+  right: var(--swiper-navigation-sides-offset, -55px);
 }
 
-.swiper-pagination {
-  display: none;
-}
-
-.swiper-horizontal>.swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
-  opacity: 1;
-}
-
-/* .swiper-button-next:after,
+.swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
   color: var(--black);
   background-color: var(--grey-lighter);
-  padding: 15px 25px;
+  padding: 15px 23px;
   border-radius: 50px;
   font-size: 30px;
 }
 
-.swiper-button-next,
-.swiper-rtl .swiper-button-prev {
-  right: -10px;
-} */
 
 /* section projects */
 

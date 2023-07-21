@@ -15,7 +15,7 @@ const swiper = new Swiper('.swiper-container', {
   loop: true,
   // Пагинация
   pagination: {
-    el: '.swiper-pagination',
+    el: '.swiper-pagination-hero',
     clickable: true
   },
   a11y: {
@@ -24,40 +24,36 @@ const swiper = new Swiper('.swiper-container', {
 });
 
 const swiperEvent = new Swiper('.swiper-event', {
-  // Цикличность
+  // Optional parameters
+  direction: 'horizontal',
   loop: true,
+  // If we need pagination
+  pagination: {
+      el: '.swiper-pagination-event',
+      clickable: true,
+  },
+  preventInteractionOnTransition: false,
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
   },
-  pagination: {
-    el: '.swiper-pagination',
-  },
-  // Default parameters
-  slidesPerView: 3,
-  allowSlideNext: true,
-  spaceBetween: 25,
+  slidesPerView:3,
+  spaceBetween: 30,
+  // Responsive breakpoints
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 320px
     320: {
-      slidesPerView: 1,
-      spaceBetween: 0
+      slidesPerView: 3,
+      spaceBetween: 20
     },
     // when window width is >= 480px
     768: {
-      slidesPerView: 2,
+      slidesPerView: 3,
       spaceBetween: 25
     },
     // when window width is >= 640px
-    1220: {
-      slidesPerView: 3,
-      spaceBetween: 25
-    },
-    1750: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    }
   }
 });
 

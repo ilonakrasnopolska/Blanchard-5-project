@@ -11,18 +11,14 @@
 @media (max-width: 1600px) {
 
   .swiper-event {
-    width: 100%;
-    max-width: 1425px;
-    height: 800px;
-    overflow: hidden;
-    position: relative;
+
   }
 
   .swiper-button-next{
     display: none;
   }
 
-  .swiper-pagination{
+  .swiper-pagination-event{
     display: block;
   }
 
