@@ -8,6 +8,8 @@ const $burger = document.getElementById("burger"),
   $menuBtn = document.querySelectorAll(".menu__btn"),
   $dropDownMenu = document.querySelectorAll(".dropdown-menu")
 
+
+  
 // swiper
 
 const swiper = new Swiper('.swiper-container', {
@@ -23,7 +25,7 @@ const swiper = new Swiper('.swiper-container', {
   }
 });
 
-const swiperEvent = new Swiper('.swiper-event', {
+const swiperEvent = new Swiper('.event__swiper', {
   // Цикличность
   loop: true,
   // Navigation arrows
@@ -32,7 +34,13 @@ const swiperEvent = new Swiper('.swiper-event', {
   },
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
   },
+
+  // Чувствительность свайпа 
+  touchRatio: 1.2,
+
   // Default parameters
   slidesPerView: 3,
   allowSlideNext: true,

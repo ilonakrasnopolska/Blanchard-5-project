@@ -615,29 +615,29 @@ input::placeholder {
 
 /* dropdowm menu */
 
-.realism-pic1 {
-  background-image: url(../img/dropdown-menu/realism1.png);
+.realism-pic {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.realism-pic1 {
+  background-image: url(../img/dropdown-menu/realism1.png);
 }
 
 .realism-pic2 {
   background-image: url(../img/dropdown-menu/realism2.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .realism-pic3 {
   background-image: url(../img/dropdown-menu/realism3.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .realism-pic4 {
   background-image: url(../img/dropdown-menu/realism4.png);
+}
+
+.impressionism-pic {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -645,27 +645,21 @@ input::placeholder {
 
 .impressionism-pic1 {
   background-image: url(../img/dropdown-menu/impressionism1.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .impressionism-pic2 {
   background-image: url(../img/dropdown-menu/impressionism2.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .impressionism-pic3 {
   background-image: url(../img/dropdown-menu/impressionism3.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .impressionism-pic4 {
   background-image: url(../img/dropdown-menu/impressionism4.png);
+}
+
+.postimpressionism-pic {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -673,27 +667,21 @@ input::placeholder {
 
 .postimpressionism-pic1 {
   background-image: url(../img/dropdown-menu/postimpressionism1.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .postimpressionism-pic2 {
   background-image: url(../img/dropdown-menu/postimpressionism2.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .postimpressionism-pic3 {
   background-image: url(../img/dropdown-menu/postimpressionism3.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .postimpressionism-pic4 {
   background-image: url(../img/dropdown-menu/postimpressionism4.png);
+}
+
+.avantgarde-pic {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -701,27 +689,21 @@ input::placeholder {
 
 .avantgarde-pic1 {
   background-image: url(../img/dropdown-menu/avantgarde1.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .avantgarde-pic2 {
   background-image: url(../img/dropdown-menu/avantgarde2.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .avantgarde-pic3 {
   background-image: url(../img/dropdown-menu/avantgarde3.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .avantgarde-pic4 {
   background-image: url(../img/dropdown-menu/avantgarde4.png);
+}
+
+.futurism-pic {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -729,30 +711,18 @@ input::placeholder {
 
 .futurism-pic1 {
   background-image: url(../img/dropdown-menu/futurism1.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .futurism-pic2 {
   background-image: url(../img/dropdown-menu/futurism2.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .futurism-pic3 {
   background-image: url(../img/dropdown-menu/futurism3.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .futurism-pic4 {
   background-image: url(../img/dropdown-menu/futurism4.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 /* swiper */
@@ -764,25 +734,22 @@ input::placeholder {
   height: 100%;
 }
 
-.swiper-img1 {
-  background-image: url(../img/hero1.png);
+.swiper-img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.swiper-img1 {
+  background-image: url(../img/hero1.png);
 }
 
 .swiper-img2 {
   background-image: url(../img/hero2.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .swiper-img3 {
   background-image: url(../img/hero3.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .swiper-horizontal>.swiper-pagination-bullets,
@@ -892,59 +859,38 @@ input::placeholder {
 }
 
 /* section events */
-
 .swiper-event {
   width: 100%;
   max-width: 1625px;
   height: 700px;
-  overflow: hidden;
   position: relative;
-}
-
-.event-pic {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top center;
-  height: max-content;
-}
-
-.event-pic1 {
-  background-image: url(../img/events1.png);
-}
-
-.event-pic2 {
-  background-image: url(../img/events2.png);
-}
-
-.event-pic3 {
-  background-image: url(../img/events3.png);
-}
-
-.event-pic4 {
-  background-image: url(../img/events4.png);
-}
-
-.event-pic5 {
-  background-image: url(../img/events5.png);
+  overflow: hidden;
 }
 
 .event__card-wrap {
-  width: 100%;
-  padding-top: 300px;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
 }
 
+.event__card-img {
+  display: block;
+  object-fit: cover;
+  flex-shrink: 0;
+}
 
 .event__card {
+  flex-basis: 100%;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 45px;
+  padding: 15px 45px 45px 45px;
   border: 1px solid var(--grey-light);
   border-top: transparent;
 }
 
 .event__img-txt {
-  margin-bottom: var(--mb-xxs-small);
+  margin-bottom: var(--mb-xs-small);
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
@@ -952,7 +898,7 @@ input::placeholder {
 }
 
 .event__card-title {
-  margin-bottom: var(--mb-xxs-small);
+  margin-bottom: var(--mb-xs-small);
   font-weight: 600;
   font-size: 24px;
   line-height: 33px;
@@ -960,7 +906,6 @@ input::placeholder {
 }
 
 .event__card-txt {
-  margin-bottom: var(--mb-normal);
   font-size: 16px;
   line-height: 32px;
   color: var(--grey);
@@ -991,21 +936,25 @@ input::placeholder {
   border-bottom: 1px solid var(--grey);
 }
 
-
-
-/* .swiper-button-next-event {
-   width: 100%;
-  top: 50%;
-  right: auto;
-  left: 49%;
-} */
-
-
 .swiper-button-next {
+  margin: 0;
   width: 100%;
-  top: 50%;
+  top: 55%;
   right: auto;
   left: 49%;
+  z-index: 10;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  width: 48px;
+  height: 48px;
+  background-color: #ECECEC;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 2;
+  color: #000000;
+  cursor: pointer;
 }
 
 .swiper-pagination {
@@ -1017,21 +966,19 @@ input::placeholder {
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
   opacity: 1;
+  bottom: 20px;
 }
 
-/* .swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after {
-  color: var(--black);
-  background-color: var(--grey-lighter);
-  padding: 15px 25px;
-  border-radius: 50px;
-  font-size: 30px;
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #CACACA;
+  padding: 5px;
 }
 
-.swiper-button-next,
-.swiper-rtl .swiper-button-prev {
-  right: -10px;
-} */
+.swiper-pagination-bullet-active {
+  background-color: #666666;
+}
 
 /* section projects */
 
