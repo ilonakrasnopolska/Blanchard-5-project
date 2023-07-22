@@ -10,16 +10,12 @@
 
 @media (max-width: 1600px) {
 
-  .swiper-event {
-
-  }
-
-  .swiper-button-next{
-    display: none;
-  }
-
-  .swiper-pagination-event{
+  .swiper-pagination-event {
     display: block;
+  }
+
+  .swiper-button-next {
+    top: 40%;
   }
 
   .header__container {
@@ -159,6 +155,17 @@
 
   .header__bottom {
     display: none;
+  }
+
+  .swiper-button-next {
+    display: none;
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    visibility: visible;
   }
 
   .footer__container {
