@@ -118,6 +118,7 @@ input::placeholder {
   --grey-light: #CACACA;
   --grey-lighter: #ECECEC;
   --grey-normal: #999999;
+  --grey-dark: #666666;
   --black: #000000;
   --white: #FFFFFF;
   --purple: #9D5CD0;
@@ -899,16 +900,25 @@ input::placeholder {
 }
 
 .event__card-wrap {
+  flex-direction: column;
   width: 100%;
+  height: 100%;
 }
 
+.event__pic {
+  display: block;
+  height: 30%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
 
 .event__card {
   height: 70%;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 45px;
+  flex-basis: 100%;
+  padding: 15px 45px 45px 45px;
   border: 1px solid var(--grey-light);
   border-top: transparent;
 }
@@ -936,7 +946,8 @@ input::placeholder {
   color: var(--grey);
 }
 
-.event__card-link-info {
+.event__card-btn {
+  border: none;
   padding: 5px;
   font-size: 16px;
   line-height: 32px;
@@ -944,18 +955,18 @@ input::placeholder {
   cursor: url(../img/cursor-2.png), pointer;
 }
 
-.event__card-link-info:focus {
+.event__card-btn:focus {
   color: var(--white);
   background-color: var(--medium-purple);
 }
 
-.event__card-link-info:hover {
+.event__card-btn:hover {
   color: var(--dark-purple);
   background-color: transparent;
   border-bottom: 1px solid var(--dark-purple);
 }
 
-.event__card-link-info:active {
+.event__card-btn:active {
   color: var(--grey);
   background-color: transparent;
   border-bottom: 1px solid var(--grey);
@@ -967,14 +978,35 @@ input::placeholder {
   margin-top: 10px;
 }
 
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  visibility: hidden;
+  text-align: center;
+}
+
 
 .swiper-event-errow-container {
   position: relative;
   width: 100%;
 }
 
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  padding: 5px;
+  background-color: var(--grey-light);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--grey-dark);
+}
+
 .swiper-button-next {
-  right: var(--swiper-navigation-sides-offset, -55px);
+  left: 99%;
+  margin: 0;
+  top: 52%;
 }
 
 .swiper-button-next:after,
