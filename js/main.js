@@ -8,7 +8,7 @@ const $burger = document.getElementById("burger"),
   $menuBtn = document.querySelectorAll(".menu__btn"),
   $dropDownMenu = document.querySelectorAll(".dropdown-menu")
 
-// swiper
+// swiper hero
 
 const swiper = new Swiper('.swiper-container', {
   // Цикличность
@@ -22,6 +22,8 @@ const swiper = new Swiper('.swiper-container', {
     paginationBulletMessage: 'Тут название слайда {{index}}',
   }
 });
+
+// swiper events
 
 const swiperEvent = new Swiper('.swiper-event', {
   // Optional parameters
@@ -38,22 +40,60 @@ const swiperEvent = new Swiper('.swiper-event', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
   },
-  slidesPerView:3,
-  spaceBetween: 30,
+
+  slidesPerView: 1,
+  spaceBetween: 10,
+
   // Responsive breakpoints
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 320px
-    320: {
-      slidesPerView: 3,
+    590: {
+      slidesPerView: 2,
       spaceBetween: 20
     },
     // when window width is >= 480px
-    768: {
+    890: {
       slidesPerView: 3,
       spaceBetween: 25
     },
-    // when window width is >= 640px
+  }
+});
+
+// swiper projects
+
+const swiperProject = new Swiper('.swiper-project', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  // If we need pagination
+  pagination: {
+      el: '.swiper-pagination-project',
+      clickable: true,
+  },
+  preventInteractionOnTransition: false,
+  // Navigation arrows
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+
+  slidesPerView: 1,
+  spaceBetween: 10,
+
+  // Responsive breakpoints
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    590: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    890: {
+      slidesPerView: 3,
+      spaceBetween: 25
+    },
   }
 });
 
