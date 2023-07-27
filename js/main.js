@@ -37,8 +37,7 @@ const swiperEvent = new Swiper('.swiper-event', {
   preventInteractionOnTransition: false,
   // Navigation arrows
   navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.event-swiper-btn'
   },
 
   slidesPerView: 1,
@@ -66,33 +65,28 @@ const swiperProject = new Swiper('.swiper-project', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  // If we need pagination
-  pagination: {
-      el: '.swiper-pagination-project',
-      clickable: true,
-  },
   preventInteractionOnTransition: false,
   // Navigation arrows
   navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.project-swiper-btn-next',
+      prevEl: '.project-swiper-btn-prev',
   },
 
   slidesPerView: 1,
-  spaceBetween: 10,
+  spaceBetween: 20,
 
   // Responsive breakpoints
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 320px
-    590: {
+    690: {
       slidesPerView: 2,
-      spaceBetween: 20
+      spaceBetween: 25
     },
     // when window width is >= 480px
-    890: {
+    1100: {
       slidesPerView: 3,
-      spaceBetween: 25
+      spaceBetween: 30
     },
   }
 });
