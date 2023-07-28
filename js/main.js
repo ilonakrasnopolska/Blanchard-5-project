@@ -8,7 +8,7 @@ const $burger = document.getElementById("burger"),
   $menuItem = document.querySelectorAll(".menu__item"),
   $menuBtn = document.querySelectorAll(".menu__btn"),
   $dropDownMenu = document.querySelectorAll(".dropdown-menu"),
-  $accordeonBtn = document.querySelectorAll(".catalogue__accordeon-btn"),
+  $acTab = document.querySelectorAll(".catalogue__ac-item-link"),
   $tabContent =document.querySelectorAll(".catalogue__list-item")
 
 // swiper hero
@@ -168,14 +168,14 @@ Array.prototype.forEach.call(
 
 // accordeon 
 
-$accordeonBtn.forEach(function (tabsBtn) {
-  tabsBtn.addEventListener('click', function (e) {
+$acTab.forEach(function (acTabs) {
+  acTabs.addEventListener('click', function (e) {
     const path = e.currentTarget.dataset.path;
 
-    $accordeonBtn.forEach(function (btn) {
-      btn.classList.remove('accordeon-btn--active')
+    $acTab.forEach(function (link) {
+      link.classList.remove('accordeon-tab')
     });
-    e.currentTarget.classList.add('accordeon-btn--active');
+    e.currentTarget.classList.add('accordeon-tab--active');
 
     $tabContent.forEach(function (tab) {
       tab.classList.remove('tab-content--active')
