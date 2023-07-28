@@ -173,7 +173,7 @@ $acTab.forEach(function (acTabs) {
     const path = e.currentTarget.dataset.path;
 
     $acTab.forEach(function (link) {
-      link.classList.remove('accordeon-tab')
+      link.classList.remove('accordeon-tab--active')
     });
     e.currentTarget.classList.add('accordeon-tab--active');
 
