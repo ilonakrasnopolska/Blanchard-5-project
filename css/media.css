@@ -161,6 +161,10 @@
     visibility: visible;
   }
 
+  .catalogue__list-item {
+    margin: 0;
+  }
+
   .footer__container {
     padding: 30px 40px;
   }
@@ -170,6 +174,18 @@
 
   .event__card {
     padding: 15px;
+  }
+
+  .catalogue-container-media {
+    flex-direction: column-reverse;
+  }
+
+  .catalogue__ac-list-item:last-child {
+    margin-bottom: var(--mb-small);
+  }
+
+  .catalogue-accordeon-img {
+    padding-top: 67%;
   }
 
   .swiper__project-logo-wrapper {
@@ -237,6 +253,10 @@
     left: -40px;
   }
 
+  .catalogue__ac-list-item .catalogue__accordeon-btn {
+    font-size: 18px;
+  }
+
   .footer__container {
     padding: 30px 15px;
   }
@@ -244,6 +264,10 @@
 
 
 @media (max-width: 370px) {
+
+  .subtitle {
+    font-size: 28px;
+  }
 
   .header__container {
     padding: 15px;
