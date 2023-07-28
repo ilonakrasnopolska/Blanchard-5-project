@@ -1,3 +1,4 @@
+new Accordion('.accordion-container');
 const $burger = document.getElementById("burger"),
   $burgerMenu = document.querySelector(".header"),
   $nav = document.querySelector(".header__nav"),
@@ -6,16 +7,18 @@ const $burger = document.getElementById("burger"),
   $searchClose = document.getElementById("search-form-close"),
   $menuItem = document.querySelectorAll(".menu__item"),
   $menuBtn = document.querySelectorAll(".menu__btn"),
-  $dropDownMenu = document.querySelectorAll(".dropdown-menu")
+  $dropDownMenu = document.querySelectorAll(".dropdown-menu"),
+  $accordeonBtn = document.querySelectorAll(".catalogue__accordeon-btn"),
+  $tabContent =document.querySelectorAll(".catalogue__list-item")
 
-// swiper
+// swiper hero
 
 const swiper = new Swiper('.swiper-container', {
   // Цикличность
   loop: true,
   // Пагинация
   pagination: {
-    el: '.swiper-pagination',
+    el: '.swiper-pagination-hero',
     clickable: true
   },
   a11y: {
@@ -23,41 +26,71 @@ const swiper = new Swiper('.swiper-container', {
   }
 });
 
+// swiper events
+
 const swiperEvent = new Swiper('.swiper-event', {
-  // Цикличность
+  // Optional parameters
+  direction: 'horizontal',
   loop: true,
+  // If we need pagination
+  pagination: {
+      el: '.swiper-pagination-event',
+      clickable: true,
+  },
+  preventInteractionOnTransition: false,
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
+      nextEl: '.event-swiper-btn'
   },
-  pagination: {
-    el: '.swiper-pagination',
-  },
-  // Default parameters
-  slidesPerView: 3,
-  allowSlideNext: true,
-  spaceBetween: 25,
+
+  slidesPerView: 1,
+  spaceBetween: 10,
+
+  // Responsive breakpoints
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 320px
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 0
+    590: {
+      slidesPerView: 2,
+      spaceBetween: 20
     },
     // when window width is >= 480px
-    768: {
+    890: {
+      slidesPerView: 3,
+      spaceBetween: 25
+    },
+  }
+});
+
+// swiper projects
+
+const swiperProject = new Swiper('.swiper-project', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  preventInteractionOnTransition: false,
+  // Navigation arrows
+  navigation: {
+      nextEl: '.project-swiper-btn-next',
+      prevEl: '.project-swiper-btn-prev',
+  },
+
+  slidesPerView: 1,
+  spaceBetween: 20,
+
+  // Responsive breakpoints
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    690: {
       slidesPerView: 2,
       spaceBetween: 25
     },
-    // when window width is >= 640px
-    1220: {
+    // when window width is >= 480px
+    1100: {
       slidesPerView: 3,
-      spaceBetween: 25
+      spaceBetween: 30
     },
-    1750: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    }
   }
 });
 
@@ -132,3 +165,24 @@ Array.prototype.forEach.call(
   document.querySelectorAll('.scroll'),
   el => new SimpleBar(el)
 );
+
+// accordeon 
+
+$accordeonBtn.forEach(function (tabsBtn) {
+  tabsBtn.addEventListener('click', function (e) {
+    const path = e.currentTarget.dataset.path;
+
+    $accordeonBtn.forEach(function (btn) {
+      btn.classList.remove('accordeon-btn--active')
+    });
+    e.currentTarget.classList.add('accordeon-btn--active');
+
+    $tabContent.forEach(function (tab) {
+      tab.classList.remove('tab-content--active')
+    });
+
+    document.querySelectorAll(`[data-target="${path}"]`).forEach(function (tab) {
+      tab.classList.add('tab-content--active');
+    });
+  });
+});
