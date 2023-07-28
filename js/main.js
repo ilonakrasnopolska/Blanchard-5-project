@@ -1,3 +1,4 @@
+new Accordion('.accordion-container');
 const $burger = document.getElementById("burger"),
   $burgerMenu = document.querySelector(".header"),
   $nav = document.querySelector(".header__nav"),
@@ -6,7 +7,9 @@ const $burger = document.getElementById("burger"),
   $searchClose = document.getElementById("search-form-close"),
   $menuItem = document.querySelectorAll(".menu__item"),
   $menuBtn = document.querySelectorAll(".menu__btn"),
-  $dropDownMenu = document.querySelectorAll(".dropdown-menu")
+  $dropDownMenu = document.querySelectorAll(".dropdown-menu"),
+  $accordeonBtn = document.querySelectorAll(".catalogue__accordeon-btn"),
+  $tabContent =document.querySelectorAll(".catalogue__list-item")
 
 // swiper hero
 
@@ -162,3 +165,24 @@ Array.prototype.forEach.call(
   document.querySelectorAll('.scroll'),
   el => new SimpleBar(el)
 );
+
+// accordeon 
+
+$accordeonBtn.forEach(function (tabsBtn) {
+  tabsBtn.addEventListener('click', function (e) {
+    const path = e.currentTarget.dataset.path;
+
+    $accordeonBtn.forEach(function (btn) {
+      btn.classList.remove('accordeon-btn--active')
+    });
+    e.currentTarget.classList.add('accordeon-btn--active');
+
+    $tabContent.forEach(function (tab) {
+      tab.classList.remove('tab-content--active')
+    });
+
+    document.querySelectorAll(`[data-target="${path}"]`).forEach(function (tab) {
+      tab.classList.add('tab-content--active');
+    });
+  });
+});
