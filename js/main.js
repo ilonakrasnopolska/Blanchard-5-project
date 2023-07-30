@@ -8,7 +8,7 @@ const $burger = document.getElementById("burger"),
   $menuItem = document.querySelectorAll(".menu__item"),
   $menuBtn = document.querySelectorAll(".menu__btn"),
   $dropDownMenu = document.querySelectorAll(".dropdown-menu"),
-  $acTab = document.querySelectorAll(".catalogue__ac-item-link"),
+  $acTab = document.querySelectorAll(".catalogue__ac-item-btn"),
   $tabContent =document.querySelectorAll(".catalogue__list-item")
 
 // swiper hero
