@@ -9,7 +9,8 @@ const $burger = document.getElementById("burger"),
   $menuBtn = document.querySelectorAll(".menu__btn"),
   $dropDownMenu = document.querySelectorAll(".dropdown-menu"),
   $acTab = document.querySelectorAll(".catalogue__ac-item-btn"),
-  $tabContent =document.querySelectorAll(".catalogue__list-item")
+  $tabContent = document.querySelectorAll(".catalogue__list-item"),
+  $formValid = document.getElementById("add-form")
 
 // swiper hero
 
@@ -34,13 +35,13 @@ const swiperEvent = new Swiper('.swiper-event', {
   loop: true,
   // If we need pagination
   pagination: {
-      el: '.swiper-pagination-event',
-      clickable: true,
+    el: '.swiper-pagination-event',
+    clickable: true,
   },
   preventInteractionOnTransition: false,
   // Navigation arrows
   navigation: {
-      nextEl: '.event-swiper-btn'
+    nextEl: '.event-swiper-btn'
   },
 
   slidesPerView: 1,
@@ -71,8 +72,8 @@ const swiperProject = new Swiper('.swiper-project', {
   preventInteractionOnTransition: false,
   // Navigation arrows
   navigation: {
-      nextEl: '.project-swiper-btn-next',
-      prevEl: '.project-swiper-btn-prev',
+    nextEl: '.project-swiper-btn-next',
+    prevEl: '.project-swiper-btn-prev',
   },
 
   slidesPerView: 1,
@@ -186,3 +187,63 @@ $acTab.forEach(function (acTabs) {
     });
   });
 });
+
+// form
+
+function validation(form) {
+  
+  function removeError(input) {
+    const parent = input.parentNode;
+
+    if (parent.classList.contains('error')) {
+        parent.querySelector('.error-label').remove()
+        parent.classList.remove('error')
+    }
+  }
+
+
+  function createError(input, text) {
+    const parent = input.parentNode;
+    const errorLabel = document.createElement('label')
+
+    errorLabel.classList.add('error-label')
+    errorLabel.textContent = text
+
+    parent.classList.add('error')
+
+    parent.append(errorLabel)
+  }
+
+  let result = true;
+
+  const allInputs = form.querySelectorAll('input');
+
+  for (const input of allInputs) {
+
+    removeError(input)
+
+    if(input.dataset.required == "true") {
+      removeError(input)
+    }
+
+    if (input.value == "") {
+      createError(input, 'Недопустимый формат!')
+      result = false
+    }
+
+  }
+
+  return result
+}
+
+$formValid.addEventListener('submit', function (event) {
+  event.preventDefault()
+
+  if (validation(this) == true) {
+    alert('Форма отправлена!')
+  }
+
+  else {
+    
+  }
+})
