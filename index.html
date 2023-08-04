@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"/>
   <link rel="stylesheet" href="./css/bootstrap-grid.css">
   <link rel="stylesheet" href="./css/accordion.min.css">
   <link rel="stylesheet" href="./css/style.css">
@@ -34,7 +35,7 @@
               </a>
             </li>
             <li class="header__list-item">
-              <a href="" class="header__list-link">
+              <a href="#2" class="header__list-link">
                 Галерея
               </a>
             </li>
@@ -273,7 +274,84 @@
         </div>
       </div>
     </section>
-    <section></section>
+    <section id="2" class="section gallery-background" role="text" aria-label="Галерея">
+      <div class="gallery container">
+       <div class="gallery__content-wrapper">
+        <h2 class="gallery__title subtitle">
+          Галерея
+        </h2>
+       <div class="row">
+        <div class="gallery__select-wrapper col-xl-3 col-lg-3 col-md-12 col-sm-12">
+         <div class="gallery__select-content">
+          <h4 class="gallery__select-txt">
+            Фильтр:
+          </h4>
+          <select class="gallery__choice js-choice">
+            <option class="gallery__choice-option">Живопись</option>
+            <option class="gallery__choice-option">Скульптура</option>
+            <option class="gallery__choice-option">Литература</option>
+          </select>
+         </div>
+          <div class="gallery__checker-list flex">
+            <label for="check1" class="gallery__checker-label">
+              <input type="checkbox" name="checker" class="gallery__checker-input" id="check1">
+              <span class="gallery__kastom-check">
+                XIX век
+              </span>
+            </label>
+            <label for="check2" class="gallery__checker-label">
+              <input type="checkbox" name="checker" class="gallery__checker-input" id="check2">
+              <span class="gallery__kastom-check">
+                XX&nbsp;век
+              </span>
+            </label>
+            <label for="check3" class="gallery__checker-label">
+              <input type="checkbox" name="checker" class="gallery__checker-input" id="check3">
+              <span class="gallery__kastom-check">
+                Современность
+              </span>
+            </label>
+          </div>
+        </div>
+        <div class="gallery__swiper-container col-xl-9 col-lg-9 col-md-12 col-sm-12">
+          <div class="swiper swiper-gallery">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="swiper-gallery-img gallery-img1" aria-label="Живопись">
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="swiper-gallery-img gallery-img2" aria-label="Живопись фигура около реки">
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="swiper-gallery-img gallery-img3" aria-label="Живопись работники">
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="swiper-gallery-img gallery-img4" aria-label="Живопись абстракция">
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="swiper-gallery-img gallery-img5" aria-label="Живопись абстракция">
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="swiper-gallery-img gallery-img6" aria-label="Живопись абстракция">
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-navigation-wrapper">
+            <div class="swiper-pagination-gallery"></div>
+          <button class="swiper-button-prev gallery-swiper-btn-prev"></button>
+          <button class="swiper-button-next gallery-swiper-btn-next"></button>
+          </div>
+        </div>     
+       </div>
+       </div>
+      </div>
+    </section>
     <section id="3" class="section" aria-label="Наш каталог">
       <div class="catalogue container">
         <div class="row">
@@ -1050,6 +1128,7 @@
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="./js/bootstrap.js"></script>
   <script src="./js/accordion.min.js"></script>

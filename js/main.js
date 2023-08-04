@@ -27,6 +27,50 @@ const swiper = new Swiper('.swiper-container', {
   }
 });
 
+// swiper gallery
+
+const swiperGallery = new Swiper('.swiper-gallery', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  preventInteractionOnTransition: false,
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination-gallery',
+    clickable: true,
+    type: 'fraction'
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.gallery-swiper-btn-next',
+    prevEl: '.gallery-swiper-btn-prev',
+  },
+
+  slidesPerView: 1,
+  spaceBetween: 10,
+
+  // Responsive breakpoints
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    390: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 320px
+    990: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    1150: {
+      slidesPerView: 3,
+      spaceBetween: 25
+    },
+  }
+});
+
+
 // swiper events
 
 const swiperEvent = new Swiper('.swiper-event', {
@@ -166,6 +210,15 @@ Array.prototype.forEach.call(
   document.querySelectorAll('.scroll'),
   el => new SimpleBar(el)
 );
+
+// select
+
+const element = document.querySelector('.js-choice');
+
+const choices = new Choices(element, {
+  searchEnabled: false,
+  itemSelectText: ""
+})
 
 // accordeon 
 
