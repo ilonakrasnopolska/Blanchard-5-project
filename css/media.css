@@ -28,6 +28,11 @@
     margin-right: var(--mr-normal);
   }
 
+  .swiper-navigation-wrapper {
+    top: -5%;
+    left: 0;
+  }
+
   .contacts__form-btn {
     padding: 15px;
   }
@@ -62,6 +67,10 @@
   .event__img-txt {
     font-weight: 400;
     text-align: end;
+  }
+
+  .swiper-navigation-wrapper {
+    top: 0;
   }
 
   .swiper__project-logo-wrapper {
@@ -170,6 +179,11 @@
     margin: 0;
   }
 
+  .swiper-navigation-wrapper {
+    top: -10%;
+    min-width: 150px;
+  }
+
   .contacts__address {
     margin-bottom: var(--mb-xs-small);
   }
@@ -214,6 +228,10 @@
   }
 
   .gallery__select-content {
+    margin-bottom: var(--mb-s-small);
+  }
+
+  .gallery__checker-list {
     margin-bottom: var(--mb-s-small);
   }
 
@@ -306,6 +324,10 @@
 
   .gallery__content-wrapper {
     padding: 30px 0;
+  }
+
+  .swiper-gallery-img {
+    background-size: cover;
   }
 
   .swiper-gallery-img {

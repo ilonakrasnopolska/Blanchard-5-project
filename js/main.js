@@ -63,7 +63,7 @@ const swiperGallery = new Swiper('.swiper-gallery', {
       spaceBetween: 20
     },
     // when window width is >= 480px
-    1150: {
+    1190: {
       slidesPerView: 3,
       spaceBetween: 25
     },
@@ -219,6 +219,34 @@ const choices = new Choices(element, {
   searchEnabled: false,
   itemSelectText: ""
 })
+
+// checkbox
+
+const checkbox1 = document.getElementById("flexCheckDefault");
+const checkbox2 = document.getElementById("flexCheckChecked");
+const checkbox3 = document.getElementById("flexCheckDefault3");
+
+
+checkbox1.addEventListener("change", function() {
+  if (this.checked) {
+    checkbox2.checked = false;
+    checkbox3.checked = false;
+  }
+});
+
+checkbox2.addEventListener("change", function() {
+  if (this.checked) {
+    checkbox1.checked = false;
+    checkbox3.checked = false;
+  }
+});
+
+checkbox3.addEventListener("change", function() {
+  if (this.checked) {
+    checkbox1.checked = false;
+    checkbox2.checked = false;
+  }
+});
 
 // accordeon 
 
