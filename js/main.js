@@ -2,6 +2,8 @@ new Accordion('.accordion-container');
 const $burger = document.getElementById("burger"),
   $burgerMenu = document.querySelector(".header"),
   $nav = document.querySelector(".header__nav"),
+  $headerList = document.querySelector(".header__list"),
+  $headerBurgerList = document.querySelectorAll(".header__list-item"),
   $search = document.getElementById("header-open-search"),
   $input = document.querySelector(".header__search-form"),
   $searchClose = document.getElementById("search-form-close"),
@@ -153,6 +155,15 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 })
 
+document.addEventListener("DOMContentLoaded", function () {
+  $headerBurgerList.forEach(function (item) {
+    item.addEventListener("click", function () {
+      $nav.classList.remove("open"),
+      $burgerMenu.classList.remove("open")
+    });
+  });
+});
+
 // search
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -169,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   $input.addEventListener("submit", function () {
-    e.preventDefault()
+    event.preventDefault()
   })
 })
 

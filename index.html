@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blanchard</title>
   <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"/>
   <link rel="stylesheet" href="./css/bootstrap-grid.css">
   <link rel="stylesheet" href="./css/accordion.min.css">
@@ -28,47 +28,47 @@
         </button>
         <img class="header__logo" src="./img/logo.png" alt="Логотип Blanchard">
         <nav class="header__nav flex">
-          <ul class="header__list flex">
+          <ul class="header__list flex" tabindex="1">
             <li class="header__list-item">
-              <a href="#1" class="header__list-link">
+              <a href="#1" class="header__list-link" tabindex="2">
                 О нас
               </a>
             </li>
             <li class="header__list-item">
-              <a href="#2" class="header__list-link">
+              <a href="#2" class="header__list-link" tabindex="3">
                 Галерея
               </a>
             </li>
             <li class="header__list-item">
-              <a href="#3" class="header__list-link">
+              <a href="#3" class="header__list-link" tabindex="4">
                 Каталог
               </a>
             </li>
             <li class="header__list-item">
-              <a href="#4" class="header__list-link">
+              <a href="#4" class="header__list-link" tabindex="5">
                 События
               </a>
             </li>
             <li class="header__list-item">
-              <a href="#5" class="header__list-link">
+              <a href="#5" class="header__list-link" tabindex="6">
                 Проекты
               </a>
             </li>
             <li class="header__list-item">
-              <a href="" class="header__list-link">
+              <a href="#6" class="header__list-link" tabindex="7">
                 Контакты
               </a>
             </li>
           </ul>
-          <button class="header__area flex">
+          <button class="header__area flex" tabindex="8">
             <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
                 fill="white" />
             </svg>
-            <p class="header__area-txt">
+            <span class="header__area-txt">
               Войти
-            </p>
+            </span>
           </button>
         </nav>
         <button class="header__top-search" id="header-open-search">
@@ -106,9 +106,9 @@
     <div class="header__bottom">
       <div class="header__bottom-container">
         <nav class="header__bottom-nav flex">
-          <ul class="menu flex">
+          <ul class="menu flex" tabindex="9">
             <li class="menu__item">
-              <button class="menu__btn">
+              <button class="menu__btn" tabindex="10">
                 Реализм
               </button>
               <ul data-simplebar class="scroll dropdown-menu" id="scroll1">
@@ -127,7 +127,7 @@
               </ul>
             </li>
             <li class="menu__item">
-              <button class="menu__btn">
+              <button class="menu__btn" tabindex="11">
                 Импрессионизм
               </button>
               <ul data-simplebar class="scroll dropdown-menu" id="scroll2">
@@ -146,7 +146,7 @@
               </ul>
             </li>
             <li class="menu__item">
-              <button class="menu__btn">
+              <button class="menu__btn" tabindex="12">
                 Постимпрессионизм
               </button>
               <ul data-simplebar class="scroll dropdown-menu" id="scroll3">
@@ -165,7 +165,7 @@
               </ul>
             </li>
             <li class="menu__item">
-              <button class="menu__btn">
+              <button class="menu__btn" tabindex="13">
                 Авангард
               </button>
               <ul data-simplebar class="scroll dropdown-menu" id="scroll4">
@@ -184,7 +184,7 @@
               </ul>
             </li>
             <li class="menu__item">
-              <button class="menu__btn">
+              <button class="menu__btn" tabindex="14">
                 Футуризм
               </button>
               <ul data-simplebar class="scroll dropdown-menu" id="scroll">
@@ -204,7 +204,7 @@
             </li>
           </ul>
           <div class="header__finder flex" role="search">
-            <button class="header__search">
+            <button class="header__search" tabindex="15">
               <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="6.8678" height="1.71695"
                   transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
@@ -214,7 +214,7 @@
               </svg>
             </button>
             <div class="header__input-wrapper" role="search">
-              <input class="header__input" type="text" placeholder="Поиск по&nbsp;сайту">
+              <input class="header__input" type="text" placeholder="Поиск по&nbsp;сайту" tabindex="16">
             </div>
           </div>
         </nav>
@@ -222,14 +222,14 @@
     </div>
   </header>
   <main>
-    <section class="section hero-background" role="slider" aria-label="Слайдер">
+    <section class="section hero-background" aria-label="Слайдер">
       <div class="swiper swiper-container" role="img">
         <div class="swiper-wrapper">
-          <div class="swiper-slide swiper-img1" aria-label="картина города" alt="picture 1">
+          <div class="swiper-slide swiper-img1" aria-label="картина города">
           </div>
-          <div class="swiper-slide swiper-img2" aria-label="картина Богов и ангелов" alt="picture 2">
+          <div class="swiper-slide swiper-img2" aria-label="картина Богов и ангелов">
           </div>
-          <div class="swiper-slide swiper-img3" aria-label="картина деревья" alt="picture 3">
+          <div class="swiper-slide swiper-img3" aria-label="картина деревья">
           </div>
         </div>
         <div class="swiper-pagination-hero"></div>
@@ -244,14 +244,14 @@
               Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт
               предпосылки для новых предложений
             </p>
-            <button class="hero__btn">
+            <button class="hero__btn" tabindex="17">
               Подписаться на рассылку
             </button>
           </div>
         </div>
       </div>
     </section>
-    <section id="1" class="section" role="text" aria-label="Информационный блок">
+    <section id="1" class="section" aria-label="Информационный блок">
       <div class="about container">
         <div class="row">
           <div class="col-xl-8 col-lg-12">
@@ -274,7 +274,7 @@
         </div>
       </div>
     </section>
-    <section id="2" class="section gallery-background" role="text" aria-label="Галерея">
+    <section id="2" class="section gallery-background" aria-label="Галерея">
       <div class="gallery container">
        <div class="gallery__content-wrapper">
         <h2 class="gallery__title subtitle">
@@ -283,9 +283,9 @@
        <div class="row">
         <div class="gallery__select-wrapper col-xl-3 col-lg-3 col-md-12 col-sm-12">
          <div class="gallery__select-content">
-          <h4 class="gallery__select-txt">
+          <span class="gallery__select-txt">
             Фильтр:
-          </h4>
+          </span>
           <select class="gallery__choice js-choice">
             <option class="gallery__choice-option">Живопись</option>
             <option class="gallery__choice-option">Скульптура</option>
@@ -319,6 +319,7 @@
               <li class="swiper-slide">
                 <div class="swiper-gallery-img gallery-img1" aria-label="Живопись">
                   <div class="swiper-box-shadow"></div>
+                  <div class="swiper-info-card"></div>
                 </div>
               </li>
               <li class="swiper-slide">
@@ -398,8 +399,8 @@
                   Доменико Гирландайо
                 </h3>
                 <p class="catalogue__datatime">
-                  <time datetime="1448-06-02" pubdate>2&nbsp;июня 1448&ndash;</time>
-                  <time datetime="1494-01-11" pubdate>11 января 1494</time>
+                  <time datetime="1448-06-02">2&nbsp;июня 1448&ndash;</time>
+                  <time datetime="1494-01-11">11 января 1494</time>
                 </p>
                 <p class="catalogue__accordeon-txt">
                   Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
@@ -413,7 +414,7 @@
           </article>
           <ul class="col-xl-7 col-lg-7 col-md-12 accordion-container" role="tablist">
             <li class="catalogue__ac-list-item ac" role="tab">
-              <button class="catalogue__accordeon-btn ac-header ac-trigger" tabindex="0">
+              <button class="catalogue__accordeon-btn ac-header ac-trigger" aria-label="Каталог художников" tabindex="18">
                 <span class="catalogue__ac-btn-data">
                   C&nbsp;1400 по&nbsp;1499&nbsp;гг
                 </span>
@@ -431,134 +432,134 @@
               <div class="row catalogue__ac-menu ac-panel">
                 <ul class="col-4 catalogue__ac-menu-list">
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Бенедетто ди&nbsp;Биндо
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Бергоньоне, Амброджо
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Биссоло, Франческо
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Больтраффио, Джованни
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Бонсиньори, Франческо
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Боттичини, Рафаэлло
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Брамантино
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Бреа, Людовико
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Бьяджо д&rsquo;Антонио Туччи
-                    </button>
+                    </a>
                   </li>
                 </ul>
                 <ul class="col-4 catalogue__ac-menu-list">
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Веккьетта
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Андреа Верроккьо
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_02" class="catalogue__ac-item-btn  accordeon-tab--active" data-path="two">
+                    <a href="#tab_02" class="catalogue__ac-item-btn  accordeon-tab--active" data-path="two">
                       Доменико Гирландайо
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Беноццо Гоццоли
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Граначчи, Франческо
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Грегорио ди&nbsp;Чекко
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Джованни да&nbsp;Удине
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Джованни ди&nbsp;Паоло
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Джорджоне
-                    </button>
+                    </a>
                   </li>
                 </ul>
                 <ul class="col-4 catalogue__ac-menu-list">
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Парентино, Бернардо
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Пезеллино
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Пьетро Перуджино
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Перуцци, Бальдассаре
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Пизанелло
-                    </button>
+                    </a>
                   </li>
                   <li class="catalogue__ac-menu-item">
-                    <button href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
+                    <a href="#tab_01" class="catalogue__ac-item-btn accordeon-tab" data-path="one">
                       Пинтуриккьо
-                    </button>
+                    </a>
                   </li>
                 </ul>
               </div>
             </li>
             <li class="catalogue__ac-list-item ac" role="tab">
-              <button class="catalogue__accordeon-btn ac-header ac-trigger" tabindex="0">
+              <button class="catalogue__accordeon-btn ac-header ac-trigger" aria-label="Каталог художников" tabindex="19">
                 <span class="catalogue__ac-btn-data">
                   C&nbsp;1500 по&nbsp;1599&nbsp;гг
                 </span>
@@ -574,24 +575,24 @@
                 </svg>
               </button>
               <div class="row catalogue__ac-menu ac-panel">
-                <div class="col-3 ac-menu-img-border">
+                <div class="col-xl-3 col-md-3 col-sm-4 ac-menu-img-border">
                   <div class="ac-menu-img"></div>
                 </div>
-                <div class="col-5">
-                  <h4 class="catalogue__ac-menu-tab-title">
+                <div class="col-xl-5 col-md-5 col-sm-6">
+                  <span class="catalogue__ac-menu-tab-title">
                     Здесь пока пусто
-                  </h4>
+                  </span>
                   <p class="catalogue__ac-menu-tab-txt">
                     А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
                   </p>
-                  <a href="" class="catalogue__ac-menu-tab-link">
+                  <a href="#2" class="catalogue__ac-menu-tab-link">
                     В галерею
                   </a>
                 </div>
               </div>
             </li>
             <li class="catalogue__ac-list-item ac" role="tab">
-              <button class="catalogue__accordeon-btn ac-header ac-trigger" tabindex="0">
+              <button class="catalogue__accordeon-btn ac-header ac-trigger" aria-label="Каталог художников" tabindex="20">
                 <span class="catalogue__ac-btn-data">
                   C&nbsp;1600 по&nbsp;1699&nbsp;гг
                 </span>
@@ -607,24 +608,24 @@
                 </svg>
               </button>
               <div class="row catalogue__ac-menu ac-panel">
-                <div class="col-3 ac-menu-img-border">
+                <div class="col-xl-3 col-md-3 col-sm-4 ac-menu-img-border">
                   <div class="ac-menu-img"></div>
                 </div>
-                <div class="col-5">
-                  <h4 class="catalogue__ac-menu-tab-title">
+                <div class="col-xl-5 col-md-5 col-sm-6">
+                  <span class="catalogue__ac-menu-tab-title">
                     Здесь пока пусто
-                  </h4>
+                  </span>
                   <p class="catalogue__ac-menu-tab-txt">
                     А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
                   </p>
-                  <a href="" class="catalogue__ac-menu-tab-link">
+                  <a href="#2" class="catalogue__ac-menu-tab-link">
                     В галерею
                   </a>
                 </div>
               </div>
             </li>
             <li class="catalogue__ac-list-item ac" role="tab">
-              <button class="catalogue__accordeon-btn ac-header ac-trigger" tabindex="0">
+              <button class="catalogue__accordeon-btn ac-header ac-trigger" aria-label="Каталог художников" tabindex="21">
                 <span class="catalogue__ac-btn-data">
                   C&nbsp;1700 по&nbsp;1799&nbsp;гг
                 </span>
@@ -640,24 +641,24 @@
                 </svg>
               </button>
               <div class="row catalogue__ac-menu ac-panel">
-                <div class="col-3 ac-menu-img-border">
+                <div class="col-xl-3 col-md-3 col-sm-4 ac-menu-img-border">
                   <div class="ac-menu-img"></div>
                 </div>
-                <div class="col-5">
-                  <h4 class="catalogue__ac-menu-tab-title">
+                <div class="col-xl-5 col-md-5 col-sm-6">
+                  <span class="catalogue__ac-menu-tab-title">
                     Здесь пока пусто
-                  </h4>
+                  </span>
                   <p class="catalogue__ac-menu-tab-txt">
                     А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
                   </p>
-                  <a href="" class="catalogue__ac-menu-tab-link">
+                  <a href="#2" class="catalogue__ac-menu-tab-link">
                     В галерею
                   </a>
                 </div>
               </div>
             </li>
             <li class="catalogue__ac-list-item ac" role="tab">
-              <button class="catalogue__accordeon-btn ac-header ac-trigger" tabindex="0">
+              <button class="catalogue__accordeon-btn ac-header ac-trigger" aria-label="Каталог художников" tabindex="22">
                 <span class="catalogue__ac-btn-data">
                   C&nbsp;1800 по&nbsp;1899&nbsp;гг
                 </span>
@@ -673,24 +674,24 @@
                 </svg>
               </button>
               <div class="row catalogue__ac-menu ac-panel">
-                <div class="col-3 ac-menu-img-border">
+                <div class="col-xl-3 col-md-3 col-sm-4 ac-menu-img-border">
                   <div class="ac-menu-img"></div>
                 </div>
-                <div class="col-5">
-                  <h4 class="catalogue__ac-menu-tab-title">
+                <div class="col-xl-5 col-md-5 col-sm-6">
+                  <span class="catalogue__ac-menu-tab-title">
                     Здесь пока пусто
-                  </h4>
+                  </span>
                   <p class="catalogue__ac-menu-tab-txt">
                     А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
                   </p>
-                  <a href="" class="catalogue__ac-menu-tab-link">
+                  <a href="#2" class="catalogue__ac-menu-tab-link">
                     В галерею
                   </a>
                 </div>
               </div>
             </li>
             <li class="catalogue__ac-list-item ac" role="tab">
-              <button class="catalogue__accordeon-btn ac-header ac-trigger" tabindex="0">
+              <button class="catalogue__accordeon-btn ac-header ac-trigger" aria-label="Каталог художников" tabindex="23">
                 <span class="catalogue__ac-btn-data">
                   C&nbsp;1900 по&nbsp;1999&nbsp;гг
                 </span>
@@ -706,24 +707,24 @@
                 </svg>
               </button>
               <div class="row catalogue__ac-menu ac-panel">
-                <div class="col-3 ac-menu-img-border">
+                <div class="col-xl-3 col-md-3 col-sm-4 ac-menu-img-border">
                   <div class="ac-menu-img"></div>
                 </div>
-                <div class="col-5">
-                  <h4 class="catalogue__ac-menu-tab-title">
+                <div class="col-xl-5 col-md-5 col-sm-6">
+                  <span class="catalogue__ac-menu-tab-title">
                     Здесь пока пусто
-                  </h4>
+                  </span>
                   <p class="catalogue__ac-menu-tab-txt">
                     А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
                   </p>
-                  <a href="" class="catalogue__ac-menu-tab-link">
+                  <a href="#2" class="catalogue__ac-menu-tab-link">
                     В галерею
                   </a>
                 </div>
               </div>
             </li>
             <li class="catalogue__ac-list-item ac" role="tab">
-              <button class="catalogue__accordeon-btn ac-header ac-trigger" tabindex="0">
+              <button class="catalogue__accordeon-btn ac-header ac-trigger" aria-label="Каталог художников" tabindex="24">
                 <span class="catalogue__ac-btn-data">
                   C&nbsp;2000&nbsp;г
                 </span>
@@ -739,17 +740,17 @@
                 </svg>
               </button>
               <div class="row catalogue__ac-menu ac-panel">
-                <div class="col-3 ac-menu-img-border">
+                <div class="col-xl-3 col-md-3 col-sm-4 ac-menu-img-border">
                   <div class="ac-menu-img"></div>
                 </div>
-                <div class="col-5">
-                  <h4 class="catalogue__ac-menu-tab-title">
+                <div class="col-xl-5 col-md-5 col-sm-6">
+                  <span class="catalogue__ac-menu-tab-title">
                     Здесь пока пусто
-                  </h4>
+                  </span>
                   <p class="catalogue__ac-menu-tab-txt">
                     А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
                   </p>
-                  <a href="" class="catalogue__ac-menu-tab-link">
+                  <a href="#2" class="catalogue__ac-menu-tab-link">
                     В галерею
                   </a>
                 </div>
@@ -784,7 +785,7 @@
                         продолжили его брат Давид и&nbsp;сын Ридольфо
                       </p>
                     </div>
-                    <button class="event__card-btn">
+                    <button class="event__card-btn" aria-label="Кнопка узнать подробнее о событии" tabindex="25">
                       Подробнее
                     </button>
                   </div>
@@ -807,7 +808,7 @@
                         факта
                       </p>
                     </div>
-                    <button class="event__card-btn">
+                    <button class="event__card-btn" aria-label="Кнопка узнать подробнее о событии" tabindex="26">
                       Подробнее
                     </button>
                   </div>
@@ -829,7 +830,7 @@
                         простого факта
                       </p>
                     </div>
-                    <button class="event__card-btn">
+                    <button class="event__card-btn" aria-label="Кнопка узнать подробнее о событии" tabindex="27">
                       Подробнее
                     </button>
                   </div>
@@ -852,7 +853,7 @@
                         которую продолжили его брат Давид и&nbsp;сын Ридольфо
                       </p>
                     </div>
-                    <button class="event__card-btn">
+                    <button class="event__card-btn" aria-label="Кнопка узнать подробнее о событии" tabindex="28">
                       Подробнее
                     </button>
                   </div>
@@ -873,7 +874,7 @@
                         Внезапно, реплицированные с&nbsp;зарубежных источников, современные исследования
                       </p>
                     </div>
-                    <button class="event__card-btn">
+                    <button class="event__card-btn" aria-label="Кнопка узнать подробнее о событии" tabindex="29">
                       Подробнее
                     </button>
                   </div>
@@ -895,7 +896,7 @@
                         простого факта
                       </p>
                     </div>
-                    <button class="event__card-btn">
+                    <button class="event__card-btn" aria-label="Кнопка узнать подробнее о событии" tabindex="30">
                       Подробнее
                     </button>
                   </div>
@@ -1034,9 +1035,9 @@
         <div class="container">
           <div class="row">
             <div class="col-xl-2 col-lg-12">
-              <b class="contacts__title">
+              <address class="contacts__title">
                 Шоурум &#8470;&nbsp;4
-              </b>
+              </address>
               <p class="contacts__address">
                 Леонтьевский переулок, дом 5/1
               </p>
@@ -1045,12 +1046,12 @@
               <form action="https://jsonplaceholder.typicode.com/posts" class="contacts__form" id="add-form">
                 <div class="contacts__input-wrapper flex">
                   <div class="contacts__input-box">
-                    <input type="text" class="contacts__form-input" placeholder="Имя*" aria-label="Обязательно">
+                    <input type="text" class="contacts__form-input" placeholder="Имя*" aria-label="Форма для заполнения.Введите имя!Обязательное поле" tabindex="31">
                   </div>
                   <div class="contacts__input-box">
-                    <input type="text" class="contacts__form-input" placeholder="Телефон*" aria-label="Обязательно">
+                    <input type="text" class="contacts__form-input" placeholder="Телефон*" aria-label="Форма для заполнения.Введите телефон!Обязательное поле" tabindex="32">
                   </div>
-                  <button class="contacts__form-btn" type="submit">Заказать<span class="contacts__form-btn-txt">
+                  <button class="contacts__form-btn" type="submit" aria-label="Кнопка для заказа обратного звонка" tabindex="33">Заказать<span class="contacts__form-btn-txt">
                       обратный
                       звонок</span></button>
                 </div>
@@ -1061,7 +1062,7 @@
                 Связаться в&nbsp;один клик
               </b>
               <div class="contacts__social-wrapper flex">
-                <a href="https://web.whatsapp.com/" class="contacts__social-link">
+                <a href="https://web.whatsapp.com/" class="contacts__social-link" aria-label="ссылка на whatsapp" tabindex="34">
                   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_191243_544)">
                       <path class="icon-path"
@@ -1078,7 +1079,7 @@
                     </defs>
                   </svg>
                 </a>
-                <a href="https://web.telegram.org/a/" class="contacts__social-link">
+                <a href="https://web.telegram.org/a/" class="contacts__social-link" aria-label="ссылка на telegram" tabindex="35">
                   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_191243_651)">
                       <path class="icon-path"
@@ -1103,7 +1104,7 @@
       <div class="map map-container">
         <iframe class="map__iframe"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8979.990935318836!2d37.590714737072766!3d55.758541571171364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a48cfff822b%3A0xf2f3d07c26907b92!2z0JvQtdC-0L3RgtGM0LXQstGB0LrQuNC5INC_0LXRgC4sIDUg0YHRgtGALjEsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjUwMDk!5e0!3m2!1sru!2sil!4v1691019176842!5m2!1sru!2sil"
-          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          width="1920" height="700" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
@@ -1113,14 +1114,14 @@
     <div class="footer__container flex">
       <img src="./img/logo.png" alt="Blanchard Логотип" class="footer__logo">
       <div class="footer__social-icon flex">
-        <a href="https://vk.com/" class="footer__social-icon-link">
+        <a href="https://vk.com/" class="footer__social-icon-link" aria-label="ссылка на социальную сеть вконтакте" tabindex="36">
           <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M22.5 0C10.074 0 0 10.0736 0 22.5C0 34.9264 10.074 45 22.5 45C34.926 45 45 34.9264 45 22.5C45 10.0736 34.926 0 22.5 0ZM33.9132 24.9335C34.9619 25.9577 36.0714 26.9217 37.0128 28.0519C37.4299 28.5519 37.823 29.0688 38.1222 29.6503C38.5495 30.4794 38.1637 31.3886 37.4216 31.4379L32.812 31.4369C31.6215 31.5354 30.6741 31.0553 29.8754 30.2414C29.2378 29.5927 28.6462 28.8999 28.0321 28.2292C27.7812 27.9539 27.517 27.6947 27.2021 27.4907C26.5737 27.0819 26.0277 27.2072 25.6677 27.8636C25.3008 28.5316 25.217 29.2719 25.182 30.0153C25.1319 31.1022 24.8041 31.3863 23.7135 31.4374C21.3832 31.5465 19.1721 31.1929 17.117 30.0181C15.3041 28.9818 13.901 27.5193 12.6783 25.8634C10.2973 22.6353 8.47381 19.0924 6.8354 15.4478C6.46665 14.627 6.73642 14.1878 7.64194 14.1707C9.14639 14.1417 10.6508 14.1454 12.1553 14.1694C12.7676 14.179 13.1727 14.5294 13.4079 15.1071C14.2209 17.1074 15.2176 19.0105 16.4665 20.7755C16.7994 21.2455 17.1391 21.7142 17.623 22.0461C18.157 22.4125 18.5639 22.2915 18.8158 21.6953C18.9769 21.3164 19.0464 20.9113 19.0814 20.5053C19.2011 19.1145 19.2153 17.7242 19.0082 16.339C18.8793 15.4722 18.3918 14.9124 17.5277 14.7485C17.0876 14.6652 17.152 14.5022 17.3661 14.2508C17.7376 13.8163 18.0856 13.5474 18.7812 13.5474L23.9893 13.5465C24.8101 13.7076 24.9942 14.0759 25.1056 14.9027L25.1102 20.6903C25.1006 21.0103 25.2709 21.9586 25.8454 22.1681C26.3058 22.32 26.6096 21.9508 26.8849 21.6594C28.1339 20.334 29.0237 18.7697 29.8206 17.1506C30.1723 16.4366 30.4757 15.6978 30.7703 14.9575C30.9895 14.4101 31.3301 14.1408 31.9479 14.15L36.9631 14.156C37.1108 14.156 37.2609 14.1574 37.4073 14.1827C38.2525 14.3273 38.4841 14.6909 38.2226 15.5154C37.811 16.8109 37.0114 17.89 36.2297 18.9718C35.3919 20.1301 34.4983 21.2478 33.6687 22.4111C32.9064 23.4746 32.9667 24.01 33.9132 24.9335Z"
               fill="#CACACA" />
           </svg>
         </a>
-        <a href="https://ok.ru/" class="footer__social-icon-link">
+        <a href="https://ok.ru/" class="footer__social-icon-link" aria-label="ссылка на социальную сеть одноклассники" tabindex="37">
           <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M19.279 14.9859C19.279 16.8409 20.7828 18.3449 22.6379 18.3449C24.4929 18.3449 25.9967 16.8409 25.9967 14.9859C25.9967 13.1309 24.4929 11.6271 22.6379 11.6271C20.7828 11.6271 19.279 13.1309 19.279 14.9859Z"
