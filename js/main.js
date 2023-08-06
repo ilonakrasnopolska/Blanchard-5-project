@@ -259,6 +259,131 @@ checkbox3.addEventListener("change", function() {
   }
 });
 
+// modal window 
+
+// 1
+
+const openModalButtonOne = document.getElementById("openModalButton1");
+const closeModalButtonOne = document.getElementById("closeModalButton1");
+const modalOne = document.getElementById("modal1");
+
+openModalButtonOne.addEventListener("click", function() {
+  modalOne.classList.add("active");
+});
+
+closeModalButtonOne.addEventListener("click", function() {
+  modalOne.classList.remove("active");
+});
+
+window.addEventListener("click", function(event) {
+  if (event.target === modal1) {
+    modal.classList.remove("active");
+  }
+});
+
+// 2
+
+const openModalButtonTwo = document.getElementById("openModalButton2");
+const closeModalButtonTwo = document.getElementById("closeModalButton2");
+const modalTwo = document.getElementById("modal2");
+
+openModalButtonTwo.addEventListener("click", function() {
+  modalTwo.classList.add("active");
+});
+
+closeModalButtonTwo.addEventListener("click", function() {
+  modalTwo.classList.remove("active");
+});
+
+window.addEventListener("click", function(event) {
+  if (event.target === modal2) {
+    modalTwo.classList.remove("active");
+  }
+});
+
+// 3
+
+const openModalButtonThree = document.getElementById("openModalButton3");
+const closeModalButtonThree = document.getElementById("closeModalButton3");
+const modalThree = document.getElementById("modal3");
+
+openModalButtonThree.addEventListener("click", function() {
+  modalThree.classList.add("active");
+});
+
+closeModalButtonThree.addEventListener("click", function() {
+  modalThree.classList.remove("active");
+});
+
+window.addEventListener("click", function(event) {
+  if (event.target === modal3) {
+    modalThree.classList.remove("active");
+  }
+});
+
+
+// 4
+
+const openModalButtonFour = document.getElementById("openModalButton4");
+const closeModalButtonFour = document.getElementById("closeModalButton4");
+const modalFour = document.getElementById("modal4");
+
+openModalButtonFour.addEventListener("click", function() {
+  modalFour.classList.add("active");
+});
+
+closeModalButtonFour.addEventListener("click", function() {
+  modalFour.classList.remove("active");
+});
+
+window.addEventListener("click", function(event) {
+  if (event.target === modal4) {
+    modalFour.classList.remove("active");
+  }
+});
+
+// 5
+
+const openModalButtonFive = document.getElementById("openModalButton5");
+const closeModalButtonFive = document.getElementById("closeModalButton5");
+const modalFive = document.getElementById("modal5");
+
+openModalButtonFive.addEventListener("click", function() {
+  modalFive.classList.add("active");
+});
+
+closeModalButtonFive.addEventListener("click", function() {
+  modalFive.classList.remove("active");
+});
+
+window.addEventListener("click", function(event) {
+  if (event.target === modal5) {
+    modalFive.classList.remove("active");
+  }
+});
+
+// 6
+
+const openModalButtonSix = document.getElementById("openModalButton6");
+const closeModalButtonSix = document.getElementById("closeModalButton6");
+const modalSix = document.getElementById("modal6");
+
+openModalButtonSix.addEventListener("click", function() {
+  modalSix.classList.add("active");
+});
+
+closeModalButtonSix.addEventListener("click", function() {
+  modalSix.classList.remove("active");
+});
+
+window.addEventListener("click", function(event) {
+  if (event.target === modal6) {
+    modalSix.classList.remove("active");
+  }
+});
+
+
+
 // accordeon 
 
 $acTab.forEach(function (acTabs) {

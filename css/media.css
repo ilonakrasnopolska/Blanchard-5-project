@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @media (max-width: 1600px) {
 
   .swiper-pagination-event {
@@ -33,6 +40,11 @@
 
   .menu__item {
     margin-right: var(--mr-normal);
+  }
+
+  .gallery__modal-card {
+    width: 590px;
+    left: 20%;
   }
 
   .swiper-navigation-wrapper {
@@ -213,6 +225,20 @@
     left: 38%;
   }
 
+  .gallery__modal-card {
+    width: 590px;
+    left: 15%;
+    top: 20%;
+  }
+
+  .modal-img {
+    background-size: 55% 100%;
+  }
+
+  .gallery__modal-card-content {
+    padding-left: 60%;
+  }
+
   .contacts__address {
     margin-bottom: var(--mb-xs-small);
   }
@@ -265,6 +291,10 @@
 
   .gallery__checker-list {
     margin-bottom: var(--mb-s-small);
+  }
+
+  .gallery__modal {
+    left: 7%;
   }
 
 }
@@ -337,6 +367,22 @@
     left: 37%;
     width: 40px;
     height: 39px;
+  }
+
+  .gallery__modal-card {
+    width: 290px;
+    height: 600px;
+    left: 0;
+    top: 13%;
+  }
+
+  .gallery__modal-card-content {
+    padding: 100% 5% 5% 5%;
+  }
+
+  .modal-img {
+    background-size: contain;
+    background-position: top center;
   }
 
   .contacts__input-wrapper {
