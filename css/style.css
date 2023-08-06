@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1035,6 +1042,113 @@ input::placeholder {
 
 .gallery__content-wrapper {
   padding: 70px 0;
+  position: relative;
+}
+
+.gallery__modal-card {
+  content: "";
+  position: absolute;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  background-color: var(--white);
+  top: 13%;
+  left: 35%;
+  width: 900px;
+  height: 500px;
+  z-index: 20;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  -o-transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+.gallery__modal-card.active {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.gallery__modal-card-close {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 3%;
+  right: 2%;
+  outline: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z' fill='black'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z' fill='black'/%3E%3C/svg%3E%0A");
+}
+
+.gallery__modal-card-content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15% 5% 15% 50%;
+}
+
+.gallery__modal-card-name {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: var(--grey);
+}
+
+.gallery__modal-card-name-art {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--grey);
+  margin-bottom: var(--mb-xxs-small);
+}
+
+.gallery__modal-card-datatime {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #999999;
+  margin-bottom: var(--mb-small);
+}
+
+.gallery__modal-card-txt {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--grey);
+}
+
+.modal-img {
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 45% 100%;
+}
+
+.modal-img1 {
+  background-image: url(../img/gallery1.png);
+}
+
+.modal-img2 {
+  background-image: url(../img/gallery2.png);
+}
+
+.modal-img3 {
+  background-image: url(../img/gallery3.png);
+}
+
+.modal-img4 {
+  background-image: url(../img/gallery4.png);
+}
+
+.modal-img5 {
+  background-image: url(../img/gallery5.png);
+}
+
+.modal-img6 {
+  background-image: url(../img/gallery6.png);
 }
 
 .gallery__swiper-container {
@@ -1396,16 +1510,6 @@ input::placeholder {
   left: 2%;
 }
 
-.swiper-info-card {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 200px;
-  height: 200px;
-  background-color: red;
-}
-
 /* section catalogue */
 
 .catalogue__txt {
@@ -1551,7 +1655,9 @@ input::placeholder {
 .catalogue__ac-menu {
   margin: 0;
   margin-bottom: var(--mb-xs-small);
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .catalogue__ac-item-btn {
