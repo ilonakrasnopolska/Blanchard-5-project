@@ -1076,7 +1076,6 @@ input::placeholder {
   height: 16px;
   top: 3%;
   right: 2%;
-  outline: none;
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z' fill='black'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z' fill='black'/%3E%3C/svg%3E%0A");
 }
 
@@ -1200,15 +1199,17 @@ input::placeholder {
 
 .gallery__checker-label:focus {
   color: var(--white);
-  outline: none;
+  outline: 1px solid transparent;
 }
 
 .gallery__checker-label:hover {
   color: var(--light-purple);
+  outline: 1px solid transparent;
 }
 
 .gallery__checker-label:active {
   color: var(--light-purple);
+  outline: 1px solid transparent;
 }
 
 .gallery__checker-input {
