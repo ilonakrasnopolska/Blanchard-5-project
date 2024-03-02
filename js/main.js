@@ -1,4 +1,4 @@
-new Accordion('.accordion-container');
+new Accordion('.accordion-container')
 const $burger = document.getElementById("burger"),
   $burgerMenu = document.querySelector(".header"),
   $nav = document.querySelector(".header__nav"),
@@ -12,10 +12,10 @@ const $burger = document.getElementById("burger"),
   $dropDownMenu = document.querySelectorAll(".dropdown-menu"),
   $acTab = document.querySelectorAll(".catalogue__ac-item-btn"),
   $tabContent = document.querySelectorAll(".catalogue__list-item"),
-  $formValid = document.getElementById("add-form")
+  $formValid = document.getElementById("add-form"),
+  $scrollBtn = document.getElementById("scrollToTopBtn")
 
 // swiper hero
-
 const swiper = new Swiper('.swiper-container', {
   // Цикличность
   loop: true,
@@ -27,10 +27,8 @@ const swiper = new Swiper('.swiper-container', {
   a11y: {
     paginationBulletMessage: 'Тут название слайда {{index}}',
   }
-});
-
+})
 // swiper gallery
-
 const swiperGallery = new Swiper('.swiper-gallery', {
   // Optional parameters
   direction: 'horizontal',
@@ -70,11 +68,8 @@ const swiperGallery = new Swiper('.swiper-gallery', {
       spaceBetween: 25
     },
   }
-});
-
-
+})
 // swiper events
-
 const swiperEvent = new Swiper('.swiper-event', {
   // Optional parameters
   direction: 'horizontal',
@@ -107,10 +102,8 @@ const swiperEvent = new Swiper('.swiper-event', {
       spaceBetween: 25
     },
   }
-});
-
+})
 // swiper projects
-
 const swiperProject = new Swiper('.swiper-project', {
   // Optional parameters
   direction: 'horizontal',
@@ -139,282 +132,17 @@ const swiperProject = new Swiper('.swiper-project', {
       spaceBetween: 30
     },
   }
-});
-
-// burger
-
-document.addEventListener("DOMContentLoaded", function () {
-  $burger.addEventListener("click", function () {
-    $burgerMenu.classList.toggle("open")
-  })
 })
 
-document.addEventListener("DOMContentLoaded", function () {
-  $burger.addEventListener("click", function () {
-    $nav.classList.toggle("open")
-  })
-})
-
-document.addEventListener("DOMContentLoaded", function () {
-  $headerBurgerList.forEach(function (item) {
-    item.addEventListener("click", function () {
-      $nav.classList.remove("open"),
-      $burgerMenu.classList.remove("open")
-    });
-  });
-});
-
-// search
-
-document.addEventListener("DOMContentLoaded", function () {
-  $search.addEventListener("click", function () {
-    $input.classList.toggle("open")
-  })
-})
-
-document.addEventListener("DOMContentLoaded", function () {
-  $searchClose.addEventListener("click", function () {
-    $input.classList.remove("open")
-  })
-})
-
-document.addEventListener("DOMContentLoaded", function () {
-  $input.addEventListener("submit", function () {
-    event.preventDefault()
-  })
-})
-
-//dropdown menu
-
-$menuBtn.forEach((btn) => {
-  btn.addEventListener('click', (e) => {
-    btn.parentElement.classList.toggle('menu-open')
-    if (!btn.parentElement.classList.contains('menu-open')) {
-      $menuItem.forEach(item => {
-        item.classList.remove('menu-open');
-      });
-    } else {
-      $menuItem.forEach(item => {
-        item.classList.remove('menu-open');
-      });
-      e.target.parentElement.classList.add('menu-open')
-    }
-  })
-})
-
-document.body.addEventListener('click', function (event) {
-
-  if (
-    event.isClick == true ||
-    event.target.classList.contains('menu__btn') == true ||
-    event.target.classList.contains('dropdowm-menu') == true
-  ) return;
-
-  $menuItem.forEach(item => {
-    item.classList.remove('menu-open')
-  })
-})
-
-// /scroll
-
-Array.prototype.forEach.call(
-  document.querySelectorAll('.scroll'),
-  el => new SimpleBar(el)
-);
-
-// select
-
-const element = document.querySelector('.js-choice');
-
-const choices = new Choices(element, {
-  searchEnabled: false,
-  itemSelectText: ""
-})
-
-// checkbox
-
-const checkbox1 = document.getElementById("flexCheckDefault");
-const checkbox2 = document.getElementById("flexCheckChecked");
-const checkbox3 = document.getElementById("flexCheckDefault3");
-
-
-checkbox1.addEventListener("change", function() {
-  if (this.checked) {
-    checkbox2.checked = false;
-    checkbox3.checked = false;
-  }
-});
-
-checkbox2.addEventListener("change", function() {
-  if (this.checked) {
-    checkbox1.checked = false;
-    checkbox3.checked = false;
-  }
-});
-
-checkbox3.addEventListener("change", function() {
-  if (this.checked) {
-    checkbox1.checked = false;
-    checkbox2.checked = false;
-  }
-});
-
-// modal window 
-
-// 1
-
-const openModalButtonOne = document.getElementById("openModalButton1");
-const closeModalButtonOne = document.getElementById("closeModalButton1");
-const modalOne = document.getElementById("modal1");
-
-openModalButtonOne.addEventListener("click", function() {
-  modalOne.classList.add("active");
-});
-
-closeModalButtonOne.addEventListener("click", function() {
-  modalOne.classList.remove("active");
-});
-
-window.addEventListener("click", function(event) {
-  if (event.target === modal1) {
-    modal.classList.remove("active");
-  }
-});
-
-// 2
-
-const openModalButtonTwo = document.getElementById("openModalButton2");
-const closeModalButtonTwo = document.getElementById("closeModalButton2");
-const modalTwo = document.getElementById("modal2");
-
-openModalButtonTwo.addEventListener("click", function() {
-  modalTwo.classList.add("active");
-});
-
-closeModalButtonTwo.addEventListener("click", function() {
-  modalTwo.classList.remove("active");
-});
-
-window.addEventListener("click", function(event) {
-  if (event.target === modal2) {
-    modalTwo.classList.remove("active");
-  }
-});
-
-// 3
-
-const openModalButtonThree = document.getElementById("openModalButton3");
-const closeModalButtonThree = document.getElementById("closeModalButton3");
-const modalThree = document.getElementById("modal3");
-
-openModalButtonThree.addEventListener("click", function() {
-  modalThree.classList.add("active");
-});
-
-closeModalButtonThree.addEventListener("click", function() {
-  modalThree.classList.remove("active");
-});
-
-window.addEventListener("click", function(event) {
-  if (event.target === modal3) {
-    modalThree.classList.remove("active");
-  }
-});
-
-
-// 4
-
-const openModalButtonFour = document.getElementById("openModalButton4");
-const closeModalButtonFour = document.getElementById("closeModalButton4");
-const modalFour = document.getElementById("modal4");
-
-openModalButtonFour.addEventListener("click", function() {
-  modalFour.classList.add("active");
-});
-
-closeModalButtonFour.addEventListener("click", function() {
-  modalFour.classList.remove("active");
-});
-
-window.addEventListener("click", function(event) {
-  if (event.target === modal4) {
-    modalFour.classList.remove("active");
-  }
-});
-
-// 5
-
-const openModalButtonFive = document.getElementById("openModalButton5");
-const closeModalButtonFive = document.getElementById("closeModalButton5");
-const modalFive = document.getElementById("modal5");
-
-openModalButtonFive.addEventListener("click", function() {
-  modalFive.classList.add("active");
-});
-
-closeModalButtonFive.addEventListener("click", function() {
-  modalFive.classList.remove("active");
-});
-
-window.addEventListener("click", function(event) {
-  if (event.target === modal5) {
-    modalFive.classList.remove("active");
-  }
-});
-
-// 6
-
-const openModalButtonSix = document.getElementById("openModalButton6");
-const closeModalButtonSix = document.getElementById("closeModalButton6");
-const modalSix = document.getElementById("modal6");
-
-openModalButtonSix.addEventListener("click", function() {
-  modalSix.classList.add("active");
-});
-
-closeModalButtonSix.addEventListener("click", function() {
-  modalSix.classList.remove("active");
-});
-
-window.addEventListener("click", function(event) {
-  if (event.target === modal6) {
-    modalSix.classList.remove("active");
-  }
-});
-
-
-
-// accordeon 
-
-$acTab.forEach(function (acTabs) {
-  acTabs.addEventListener('click', function (e) {
-    const path = e.currentTarget.dataset.path;
-
-    $acTab.forEach(function (link) {
-      link.classList.remove('accordeon-tab--active')
-    });
-    e.currentTarget.classList.add('accordeon-tab--active');
-
-    $tabContent.forEach(function (tab) {
-      tab.classList.remove('tab-content--active')
-    });
-
-    document.querySelectorAll(`[data-target="${path}"]`).forEach(function (tab) {
-      tab.classList.add('tab-content--active');
-    });
-  });
-});
-
-// form
-
+//function validation form
 function validation(form) {
-  
+
   function removeError(input) {
     const parent = input.parentNode;
 
     if (parent.classList.contains('error')) {
-        parent.querySelector('.error-label').remove()
-        parent.classList.remove('error')
+      parent.querySelector('.error-label').remove()
+      parent.classList.remove('error')
     }
   }
 
@@ -431,15 +159,15 @@ function validation(form) {
     parent.append(errorLabel)
   }
 
-  let result = true;
+  let result = true
 
-  const allInputs = form.querySelectorAll('input');
+  const allInputs = form.querySelectorAll('input')
 
   for (const input of allInputs) {
 
     removeError(input)
 
-    if(input.dataset.required == "true") {
+    if (input.dataset.required == "true") {
       removeError(input)
     }
 
@@ -453,14 +181,193 @@ function validation(form) {
   return result
 }
 
+//function for gallery modal windows
+function toggleGalleryModal(openBtn, closeBtn, modalName, modalIndex) {
+  openBtn.addEventListener("click", function () {
+    modalName.classList.add("active")
+  })
+  
+  closeBtn.addEventListener("click", function () {
+    modalName.classList.remove("active")
+  })
+  
+  window.addEventListener("click", function (event) {
+    if (event.target === modalIndex) {
+      modalName.classList.remove("active")
+    }
+  })
+}
+
+//scroll
+Array.prototype.forEach.call(
+  document.querySelectorAll('.scroll'),
+  el => new SimpleBar(el)
+)
+
+//select choices on
+const element = document.querySelector('.js-choice')
+const choices = new Choices(element, {
+  searchEnabled: false,
+  itemSelectText: ""
+})
+
+
+//dropdown menu
+$menuBtn.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    btn.parentElement.classList.toggle('menu-open')
+    if (!btn.parentElement.classList.contains('menu-open')) {
+      $menuItem.forEach(item => {
+        item.classList.remove('menu-open')
+      })
+    } else {
+      $menuItem.forEach(item => {
+        item.classList.remove('menu-open')
+      })
+      e.target.parentElement.classList.add('menu-open')
+    }
+  })
+})
+document.body.addEventListener('click', function (event) {
+  if (
+    event.isClick == true ||
+    event.target.classList.contains('menu__btn') == true ||
+    event.target.classList.contains('dropdowm-menu') == true
+  ) return;
+
+  $menuItem.forEach(item => {
+    item.classList.remove('menu-open')
+  })
+})
+
+//accordeon 
+$acTab.forEach(function (acTabs) {
+  acTabs.addEventListener('click', function (e) {
+    const path = e.currentTarget.dataset.path
+
+    $acTab.forEach(function (link) {
+      link.classList.remove('accordeon-tab--active')
+    });
+    e.currentTarget.classList.add('accordeon-tab--active');
+
+    $tabContent.forEach(function (tab) {
+      tab.classList.remove('tab-content--active')
+    })
+
+    document.querySelectorAll(`[data-target="${path}"]`).forEach(function (tab) {
+      tab.classList.add('tab-content--active')
+    })
+  })
+})
+
+//form
 $formValid.addEventListener('submit', function (event) {
   event.preventDefault()
 
   if (validation(this) == true) {
     alert('Форма отправлена!')
   }
+})
 
-  else {
-    
+//auto scroll button
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 100) {
+    $scrollBtn.classList.add('show')
+  } else {
+    $scrollBtn.classList.remove('show')
   }
+})
+$scrollBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+})
+
+//checkbox
+const checkbox1 = document.getElementById("flexCheckDefault")
+const checkbox2 = document.getElementById("flexCheckChecked")
+const checkbox3 = document.getElementById("flexCheckDefault3")
+checkbox1.addEventListener("change", function () {
+  if (this.checked) {
+    checkbox2.checked = false
+    checkbox3.checked = false
+  }
+})
+checkbox2.addEventListener("change", function () {
+  if (this.checked) {
+    checkbox1.checked = false
+    checkbox3.checked = false
+  }
+})
+checkbox3.addEventListener("change", function () {
+  if (this.checked) {
+    checkbox1.checked = false
+    checkbox2.checked = false
+  }
+})
+
+//modal window 
+// 1
+const openModalButtonOne = document.getElementById("openModalButton1")
+const closeModalButtonOne = document.getElementById("closeModalButton1")
+const modalOne = document.getElementById("modal1")
+toggleGalleryModal(openModalButtonOne, closeModalButtonOne, modalOne, modal1)
+
+//2
+const openModalButtonTwo = document.getElementById("openModalButton2")
+const closeModalButtonTwo = document.getElementById("closeModalButton2")
+const modalTwo = document.getElementById("modal2")
+toggleGalleryModal(openModalButtonTwo, closeModalButtonTwo, modalTwo, modal2)
+
+//3
+const openModalButtonThree = document.getElementById("openModalButton3")
+const closeModalButtonThree = document.getElementById("closeModalButton3")
+const modalThree = document.getElementById("modal3")
+toggleGalleryModal(openModalButtonThree, closeModalButtonThree, modalThree, modal3)
+
+//4
+const openModalButtonFour = document.getElementById("openModalButton4")
+const closeModalButtonFour = document.getElementById("closeModalButton4")
+const modalFour = document.getElementById("modal4")
+toggleGalleryModal(openModalButtonFour, closeModalButtonFour, modalFour, modal4)
+
+//5
+const openModalButtonFive = document.getElementById("openModalButton5")
+const closeModalButtonFive = document.getElementById("closeModalButton5")
+const modalFive = document.getElementById("modal5")
+toggleGalleryModal(openModalButtonFive, closeModalButtonFive, modalFive, modal5)
+
+//6
+const openModalButtonSix = document.getElementById("openModalButton6")
+const closeModalButtonSix = document.getElementById("closeModalButton6")
+const modalSix = document.getElementById("modal6")
+toggleGalleryModal(openModalButtonSix, closeModalButtonSix, modalSix, modal6)
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  //burger
+  $burger.addEventListener("click", function () {
+    $burgerMenu.classList.toggle("open")
+  })
+  $burger.addEventListener("click", function () {
+    $nav.classList.toggle("open")
+  })
+  $headerBurgerList.forEach(function (item) {
+    item.addEventListener("click", function () {
+      $nav.classList.remove("open"),
+        $burgerMenu.classList.remove("open")
+    })
+  })
+
+  //search
+  $search.addEventListener("click", function () {
+    $input.classList.toggle("open")
+  })
+  $searchClose.addEventListener("click", function () {
+    $input.classList.remove("open")
+  })
+  $input.addEventListener("submit", function (event) {
+    event.preventDefault()
+  })
 })
